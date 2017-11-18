@@ -150,22 +150,24 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
     }
     
     @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
-        var jawOpen = (shapes[ARFaceAnchor.BlendShapeLocation.jawOpen] as! Double)
-        var mouthFunnel = (shapes[ARFaceAnchor.BlendShapeLocation.mouthFunnel] as! Double)
-        var mouthClose = (shapes[ARFaceAnchor.BlendShapeLocation.mouthClose] as! Double)
-        var mouthPucker = (shapes[ARFaceAnchor.BlendShapeLocation.mouthPucker] as! Double)
+        let jawOpen = (shapes[ARFaceAnchor.BlendShapeLocation.jawOpen] as! Double)
+        let mouthFunnel = (shapes[ARFaceAnchor.BlendShapeLocation.mouthFunnel] as! Double)
+        let mouthClose = (shapes[ARFaceAnchor.BlendShapeLocation.mouthClose] as! Double)
+        let mouthPucker = (shapes[ARFaceAnchor.BlendShapeLocation.mouthPucker] as! Double)
         
-        confidence(jmmm: [jawOpen, mouthFunnel, mouthClose, mouthPucker], vowel: "a")
+        diff(jmmm: [jawOpen, mouthFunnel, mouthClose, mouthPucker], vowel: "a")
         var str = String(jawOpen) + " " + String(mouthFunnel) + " " + String(mouthClose) + " " + String(mouthPucker)
         print(str)
     }
     
-    func confidence(jmmm: [Double], vowel: String){
+    func diff(jmmm: [Double], vowel: String) -> [Double] {
+        var dif = jmmm
         let v_dict = ["a": [0.323729, 0.0618158, 0.0480391, 0.0595103], "e": [0.323729, 0.0618158, 0.0480391, 0.0595103], "o": [0.323729, 0.0618158, 0.0480391, 0.0595103]]
         let v = (v_dict[vowel] as! [Double])
-        for  i in v {
-            print(i)
+        for (i, v) in v.enumerated() {
+            dif[i] -= v
         }
+        return dif
         
     }
 }
