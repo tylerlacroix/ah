@@ -37,13 +37,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         sceneView.automaticallyUpdatesLighting = true
         
         // virtualFaceNode - ARSCNFaceGeometry
-        let device = sceneView.device!
-        let maskGeometry = ARSCNFaceGeometry(device: device)!
+        //let device = sceneView.device!
+//        let maskGeometry = ARSCNFaceGeometry(device: device)!
+//
+//        maskGeometry.firstMaterial?.diffuse.contents = UIColor.lightGray
+//        maskGeometry.firstMaterial?.lightingModel = .physicallyBased
         
-        maskGeometry.firstMaterial?.diffuse.contents = UIColor.lightGray
-        maskGeometry.firstMaterial?.lightingModel = .physicallyBased
-        
-        virtualFaceNode.geometry = maskGeometry
+//        virtualFaceNode.geometry = maskGeometry
         
         resetTracking()
         
