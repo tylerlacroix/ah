@@ -14,6 +14,7 @@ class InstructionsViewController: UIViewController {
 
     var playerVC: AVPlayerViewController!
     internal var vowel: String!
+    var phoneme = "oo"
     
     
     override func viewDidLoad() {
@@ -26,14 +27,17 @@ class InstructionsViewController: UIViewController {
         switch vowel {
         case "a":
             fileName = "Ah"
+            phoneme = "ay"
         case "e":
             fileName = "Eh"
         case "i":
             fileName = "Ee(i)"
+            phoneme = "ee"
         case "o":
             fileName = "Oh"
         case "u":
             fileName = "oo(u)"
+            phoneme = "oo"
         default:
             break   // Fuck it.
         }
@@ -64,7 +68,10 @@ class InstructionsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // When the child video player is instantiated, get its reference
         if (segue.identifier == "videoSegue") {
-            playerVC = segue.destination as! AVPlayerViewController;
+            playerVC = segue.destination as! AVPlayerViewController
+        } else if (segue.identifier == "faceSegue") {
+            let faceVC = segue.destination as! FaceScoreViewController
+            faceVC.phoneme = phoneme
         }
     }
 }
