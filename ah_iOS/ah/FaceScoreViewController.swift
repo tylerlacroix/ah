@@ -94,7 +94,7 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
         sceneView.automaticallyUpdatesLighting = true
         
         // virtualFaceNode - ARSCNFaceGeometry
-        let device = sceneView.device!
+        /*let device = sceneView.device!
         let maskGeometry = ARSCNFaceGeometry(device: device)!
         
         maskGeometry.firstMaterial?.diffuse.contents = UIColor.lightGray
@@ -102,7 +102,7 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
         
         virtualFaceNode.geometry = maskGeometry
         
-        resetTracking()
+        resetTracking()*/
         
         //self.addTapGesture()
     }
