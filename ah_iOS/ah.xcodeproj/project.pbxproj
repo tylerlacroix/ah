@@ -512,7 +512,6 @@
 				58A729D81FC109D3006500C8 /* InstructionsViewController.swift in Sources */,
 				58C4338F1FC16CF000E0F5D5 /* VowelsViewController.swift in Sources */,
 				C4E947251FC12AFB00C7B1BE /* FaceScoreViewController.swift in Sources */,
-				58FC8B711FC125F7009535E9 /* RetryViewController.swift in Sources */,
 				C4E947381FC180EF00C7B1BE /* BubbleViewController.swift in Sources */,
 				82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */,
 			);
@@ -689,11 +688,11 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ah/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toshihiroGotoh.FaceTraking-DepthImage";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ah.ah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = ../ah_iOS/ah/OpenEarsHeader.h;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -710,11 +709,11 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ah/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toshihiroGotoh.FaceTraking-DepthImage";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ah.ah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = ../ah_iOS/ah/OpenEarsHeader.h;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
