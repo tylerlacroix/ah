@@ -21,14 +21,7 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
     var pathToSecondDynamicallyGeneratedDictionary: String!
     var timer: Timer!
     
-    @IBOutlet var stopButton:UIButton!
-    @IBOutlet var startButton:UIButton!
-    @IBOutlet var suspendListeningButton:UIButton!
-    @IBOutlet var resumeListeningButton:UIButton!
-    @IBOutlet var statusTextView:UITextView!
-    @IBOutlet var heardTextView:UITextView!
-    @IBOutlet var pocketsphinxDbLabel:UILabel!
-    @IBOutlet var fliteDbLabel:UILabel!
+    @IBOutlet var resetButton:UIButton!
     
     // ARSCNView
     @IBOutlet var sceneView: ARSCNView!
@@ -86,12 +79,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
                 OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false)
             }
             startDisplayingLevels()
-            
-            // Here is some UI stuff that has nothing specifically to do with OpenEars implementation
-            self.startButton.isHidden = true
-            self.stopButton.isHidden = true
-            self.suspendListeningButton.isHidden = true
-            self.resumeListeningButton.isHidden = true
         }
         
         
@@ -206,15 +193,12 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
         let score = String(Int(100/(1+pow(M_E, (-0.0002*Double(recognitionScore)!-4.4985)))))
         print("Local callback: The received hypothesis is \(hypothesis!) with a score of \(score) and an ID of \(utteranceID!)")
         
-        self.heardTextView.text = "Heard: \"\(hypothesis!)\" score: \"\(score)\""
-        
         // This is how to use an available instance of OEFliteController. We're going to repeat back the command that we heard with the voice we've chosen.
         self.fliteController.say(_:"You said \(hypothesis!)", with:self.slt)
     }
     // An optional delegate method of OEEventsObserver which informs that the interruption to the audio session ended.
     func audioSessionInterruptionDidEnd() {
         print("Local callback:  AudioSession interruption ended.") // Log it.
-        self.statusTextView.text = "Status: AudioSession interruption ended." // Show it in the status box.
         // We're restarting the previously-stopped listening loop.
         if(!OEPocketsphinxController.sharedInstance().isListening){
             OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false)
@@ -225,7 +209,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
     // An optional delegate method of OEEventsObserver which informs that the audio input became unavailable.
     func audioInputDidBecomeUnavailable() {
         print("Local callback:  The audio input has become unavailable") // Log it.
-        self.statusTextView.text = "Status: The audio input has become unavailable" // Show it in the status box.
         
         if(OEPocketsphinxController.sharedInstance().isListening){
             let stopListeningError: Error! = OEPocketsphinxController.sharedInstance().stopListening() // React to it by telling Pocketsphinx to stop listening since there is no available input (but only if we are listening).
@@ -237,7 +220,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
         // An optional delegate method of OEEventsObserver which informs that the unavailable audio input became available again.
         func audioInputDidBecomeAvailable() {
             print("Local callback: The audio input is available") // Log it.
-            self.statusTextView.text = "Status: The audio input is available" // Show it in the status box.
             if(!OEPocketsphinxController.sharedInstance().isListening) {
                 OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false) // Start speech recognition, but only if we aren't already listening.
             }
@@ -245,7 +227,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
         // An optional delegate method of OEEventsObserver which informs that there was a change to the audio route (e.g. headphones were plugged in or unplugged).
         func audioRouteDidChange(toRoute newRoute: String!) {
             print("Local callback: Audio route change. The new audio route is \(newRoute)") // Log it.
-            self.statusTextView.text = "Status: Audio route change. The new audio route is \(newRoute)"// Show it in the status box.
             let stopListeningError: Error! = OEPocketsphinxController.sharedInstance().stopListening() // React to it by telling Pocketsphinx to stop listening since there is no available input (but only if we are listening).
             if(stopListeningError != nil) {
                 print("Error while stopping listening in audioInputDidBecomeAvailable: \(stopListeningError)")
@@ -265,25 +246,17 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
     func pocketsphinxRecognitionLoopDidStart() {
         
         print("Local callback: Pocketsphinx started.") // Log it.
-        self.statusTextView.text = "Status: Pocketsphinx started." // Show it in the status box.
     }
     
     // An optional delegate method of OEEventsObserver which informs that Pocketsphinx is now listening for speech.
     func pocketsphinxDidStartListening() {
         
         print("Local callback: Pocketsphinx is now listening.") // Log it.
-        self.statusTextView.text = "Status: Pocketsphinx is now listening." // Show it in the status box.
-        
-        self.startButton.isHidden = true // React to it with some UI changes.
-        self.stopButton.isHidden = false
-        self.suspendListeningButton.isHidden = false
-        self.resumeListeningButton.isHidden = true
     }
     
     // An optional delegate method of OEEventsObserver which informs that Pocketsphinx detected speech and is starting to process it.
     func pocketsphinxDidDetectSpeech() {
         print("Local callback: Pocketsphinx has detected speech.") // Log it.
-        self.statusTextView.text = "Status: Pocketsphinx has detected speech." // Show it in the status box.
     }
     
     // An optional delegate method of OEEventsObserver which informs that Pocketsphinx detected a second of silence, indicating the end of an utterance.
@@ -291,7 +264,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
     // this method being called and the hypothesis being returned.
     func pocketsphinxDidDetectFinishedSpeech() {
         print("Local callback: Pocketsphinx has detected a second of silence, concluding an utterance.") // Log it.
-        self.statusTextView.text = "Status: Pocketsphinx has detected finished speech." // Show it in the status box.
     }
     
     
@@ -299,7 +271,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
     // likely in response to the OEPocketsphinxController being told to stop listening via the stopListening method.
     func pocketsphinxDidStopListening() {
         print("Local callback: Pocketsphinx has stopped listening.") // Log it.
-        self.statusTextView.text = "Status: Pocketsphinx has stopped listening." // Show it in the status box.
     }
     
     // An optional delegate method of OEEventsObserver which informs that Pocketsphinx is still in its listening loop but it is not
@@ -308,7 +279,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
     // or as a result of the OEPocketsphinxController being told to suspend recognition via the suspendRecognition method.
     func pocketsphinxDidSuspendRecognition() {
         print("Local callback: Pocketsphinx has suspended recognition.") // Log it.
-        self.statusTextView.text = "Status: Pocketsphinx has suspended recognition." // Show it in the status box.
     }
     
     // An optional delegate method of OEEventsObserver which informs that Pocketsphinx is still in its listening loop and after recognition
@@ -317,7 +287,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
     // or as a result of the OEPocketsphinxController being told to resume recognition via the resumeRecognition method.
     func pocketsphinxDidResumeRecognition() {
         print("Local callback: Pocketsphinx has resumed recognition.") // Log it.
-        self.statusTextView.text = "Status: Pocketsphinx has resumed recognition." // Show it in the status box.
     }
     
     // An optional delegate method which informs that Pocketsphinx switched over to a new language model at the given URL in the course of
@@ -331,24 +300,20 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
     // complex interaction between sound classes. You don't have to do anything yourself in order to prevent Pocketsphinx from listening to Flite talk and trying to recognize the speech.
     func fliteDidStartSpeaking() {
         print("Local callback: Flite has started speaking") // Log it.
-        self.statusTextView.text = "Status: Flite has started speaking." // Show it in the status box.
     }
     
     // An optional delegate method of OEEventsObserver which informs that Flite is finished speaking, most likely to be useful if debugging a
     // complex interaction between sound classes.
     func fliteDidFinishSpeaking() {
         print("Local callback: Flite has finished speaking") // Log it.
-        self.statusTextView.text = "Status: Flite has finished speaking." // Show it in the status box.
     }
     
     func pocketSphinxContinuousSetupDidFail(withReason reasonForFailure: String!) { // This can let you know that something went wrong with the recognition loop startup. Turn on [OELogging startOpenEarsLogging] to learn why.
         print("Local callback: Setting up the continuous recognition loop has failed for the reason \(reasonForFailure), please turn on OELogging.startOpenEarsLogging() to learn more.") // Log it.
-        self.statusTextView.text = "Status: Not possible to start recognition loop." // Show it in the status box.
     }
     
     func pocketSphinxContinuousTeardownDidFail(withReason reasonForFailure: String!) { // This can let you know that something went wrong with the recognition loop startup. Turn on [OELogging startOpenEarsLogging] to learn why.
         print("Local callback: Tearing down the continuous recognition loop has failed for the reason %, please turn on [OELogging startOpenEarsLogging] to learn more.", reasonForFailure) // Log it.
-        self.statusTextView.text = "Status: Not possible to cleanly end recognition loop." // Show it in the status box.
     }
     
     func testRecognitionCompleted() { // A test file which was submitted for direct recognition via the audio driver is done.
@@ -405,20 +370,10 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
         
         
         OEPocketsphinxController.sharedInstance().suspendRecognition()
-        
-        self.startButton.isHidden = true
-        self.stopButton.isHidden = false
-        self.suspendListeningButton.isHidden = true
-        self.resumeListeningButton.isHidden = false
     }
     
     @IBAction func resumeListeningButtonAction() { // This is the action for the button which resumes listening if it has been suspended
         OEPocketsphinxController.sharedInstance().resumeRecognition()
-        
-        self.startButton.isHidden = true
-        self.stopButton.isHidden = false
-        self.suspendListeningButton.isHidden = false
-        self.resumeListeningButton.isHidden = true
     }
     
     @IBAction func stopButtonAction() { // This is the action for the button which shuts down the recognition loop.
@@ -428,20 +383,12 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
                 print("Error while stopping listening in pocketsphinxFailedNoMicPermissions: \(stopListeningError)")
             }
         }
-        self.startButton.isHidden = false
-        self.stopButton.isHidden = true
-        self.suspendListeningButton.isHidden = true
-        self.resumeListeningButton.isHidden = true
     }
     
     @IBAction func startButtonAction() { // This is the action for the button which starts up the recognition loop again if it has been shut down.
         if(!OEPocketsphinxController.sharedInstance().isListening) {
             OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false) // Start speech recognition, but only if we aren't already listening.
         }
-        self.startButton.isHidden = true
-        self.stopButton.isHidden = false
-        self.suspendListeningButton.isHidden = false
-        self.resumeListeningButton.isHidden = true
     }
     
     @IBAction func banana() {
@@ -468,20 +415,7 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
         if(self.timer != nil) {
             self.timer.invalidate()
         }
-        // start the timer
-        self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateLevelsUI), userInfo: nil, repeats: true)
         
-    }
-    
-    
-    
-    @objc func updateLevelsUI() { // And here is how we obtain the levels.  This method includes the actual OpenEars methods and uses their results to update the UI of this view controller.
-        
-        self.pocketsphinxDbLabel.text = "Pocketsphinx Input level: \(OEPocketsphinxController.sharedInstance().pocketsphinxInputLevel)"//pocketsphinxInputLevel is an OpenEars method of the class OEPocketsphinxController.
-        
-        if(self.fliteController.speechInProgress) {
-            self.fliteDbLabel.text = "Flite Output level: \(self.fliteController.fliteOutputLevel)" // fliteOutputLevel is an OpenEars method of the class OEFliteController.
-        }
     }
 }
 
