@@ -147,15 +147,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZc-A7-EEC">
+                                <rect key="frame" x="13" y="40" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6YQ-jW-9lb"/>
+                                    <constraint firstAttribute="width" constant="40" id="7uy-2Z-yBN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="46"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeAction:" destination="2O9-FE-3Zy" eventType="touchUpInside" id="3YS-hf-lEW"/>
+                                    <action selector="closeAction:" destination="lg5-XV-M9H" eventType="touchUpInside" id="yuL-7a-3F8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="keR-iq-gFc" firstAttribute="centerX" secondItem="Xij-Wa-SLz" secondAttribute="centerX" id="Be2-FC-3fw"/>
+                            <constraint firstItem="2GX-rC-XEk" firstAttribute="top" secondItem="cZc-A7-EEC" secondAttribute="bottom" constant="-36" id="JyA-Oe-dtj"/>
                             <constraint firstItem="keR-iq-gFc" firstAttribute="top" secondItem="2GX-rC-XEk" secondAttribute="top" id="K5G-qi-h44"/>
+                            <constraint firstItem="2GX-rC-XEk" firstAttribute="leading" secondItem="cZc-A7-EEC" secondAttribute="trailing" constant="-53" id="UDC-H4-4by"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2GX-rC-XEk"/>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="cZc-A7-EEC" id="WcN-LU-y3u"/>
                         <outlet property="mouthShapeCircleView" destination="6uq-6l-yLS" id="U00-2P-us5"/>
                         <outlet property="mouthShapePercent" destination="box-K9-4Hm" id="207-A7-fsi"/>
                         <outlet property="pronounciationCircleView" destination="6eO-gR-8gt" id="KbN-jK-FIC"/>
@@ -337,7 +362,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lg5-XV-M9H" kind="show" identifier="faceSegue" id="bnM-j4-hqn"/>
+                                    <segue destination="lg5-XV-M9H" kind="showDetail" identifier="faceSegue" action="showViewController:sender:" id="bnM-j4-hqn"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-Tt-5b4">
@@ -374,9 +399,9 @@
                                     <constraint firstAttribute="width" constant="40" id="VtD-lP-ECM"/>
                                     <constraint firstAttribute="height" constant="40" id="h6v-D8-5I8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="46"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="X">
+                                <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -384,6 +409,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeAction:" destination="2O9-FE-3Zy" eventType="touchUpInside" id="qXd-ga-3qh"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtK-9g-Olj">
                                 <rect key="frame" x="40" y="360.33333333333326" width="295" height="297.66666666666674"/>
@@ -421,12 +449,13 @@
                         <viewLayoutGuide key="safeArea" id="UEM-Cz-jFH"/>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="gxf-rp-o8Y" id="Qs3-Az-mbv"/>
                         <outlet property="tipsText" destination="gtK-9g-Olj" id="mRA-uc-mQ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNU-pf-pe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3941.5999999999999" y="-333.25123152709364"/>
+            <point key="canvasLocation" x="4743" y="-333"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JCz-XT-dS4">

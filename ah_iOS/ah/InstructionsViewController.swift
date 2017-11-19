@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class InstructionsViewController: UIViewController {
+class InstructionsViewController: ModalViewController {
 
     
     @IBOutlet weak var tipsText: UITextView!

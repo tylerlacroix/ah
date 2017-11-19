@@ -28,6 +28,8 @@
 		C4E947301FC13B4000C7B1BE /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E9472D1FC13B4000C7B1BE /* OpenEars.framework */; };
 		C4E947311FC13B4000C7B1BE /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E9472E1FC13B4000C7B1BE /* Slt.framework */; };
 		C4E947381FC180EF00C7B1BE /* BubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E947371FC180EE00C7B1BE /* BubbleViewController.swift */; };
+		C4E9473A1FC18D4400C7B1BE /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E947391FC18D4300C7B1BE /* ModalViewController.swift */; };
+		C4E9473C1FC191B900C7B1BE /* BubbleViewControllerBW.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E9473B1FC191B900C7B1BE /* BubbleViewControllerBW.swift */; };
 		C5E257CA1FC14DC4003F7522 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E257C91FC14DC4003F7522 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		C4E9472E1FC13B4000C7B1BE /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slt.framework; path = Framework/Slt.framework; sourceTree = "<group>"; };
 		C4E947321FC13B6900C7B1BE /* OpenEarsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenEarsHeader.h; sourceTree = "<group>"; };
 		C4E947371FC180EE00C7B1BE /* BubbleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleViewController.swift; sourceTree = "<group>"; };
+		C4E947391FC18D4300C7B1BE /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		C4E9473B1FC191B900C7B1BE /* BubbleViewControllerBW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleViewControllerBW.swift; sourceTree = "<group>"; };
 		C5E257C91FC14DC4003F7522 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		D598C6BD4A4CA27E00F63506 /* Pods-FaceTrakingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingUITests/Pods-FaceTrakingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E71834D6AF6A4A879093BD03 /* Pods-FaceTraking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTraking.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 		82102EF31FBC2A4F00C6D1EA /* ah */ = {
 			isa = PBXGroup;
 			children = (
+				C4E9473B1FC191B900C7B1BE /* BubbleViewControllerBW.swift */,
 				C4E947371FC180EE00C7B1BE /* BubbleViewController.swift */,
 				58C433921FC1753600E0F5D5 /* Ee(i).mp4 */,
 				58C433911FC1753600E0F5D5 /* Eh.mp4 */,
@@ -171,6 +176,7 @@
 				82102EFB1FBC2A4F00C6D1EA /* Assets.xcassets */,
 				82102EFD1FBC2A4F00C6D1EA /* LaunchScreen.storyboard */,
 				82102F001FBC2A4F00C6D1EA /* Info.plist */,
+				C4E947391FC18D4300C7B1BE /* ModalViewController.swift */,
 				58A729D71FC109D3006500C8 /* InstructionsViewController.swift */,
 				C4E947321FC13B6900C7B1BE /* OpenEarsHeader.h */,
 				58C4338E1FC16CF000E0F5D5 /* VowelsViewController.swift */,
@@ -511,10 +517,11 @@
 				C5E257CA1FC14DC4003F7522 /* CircleView.swift in Sources */,
 				58A729D81FC109D3006500C8 /* InstructionsViewController.swift in Sources */,
 				58C4338F1FC16CF000E0F5D5 /* VowelsViewController.swift in Sources */,
+				C4E9473C1FC191B900C7B1BE /* BubbleViewControllerBW.swift in Sources */,
 				C4E947251FC12AFB00C7B1BE /* FaceScoreViewController.swift in Sources */,
-				58FC8B711FC125F7009535E9 /* RetryViewController.swift in Sources */,
 				C4E947381FC180EF00C7B1BE /* BubbleViewController.swift in Sources */,
 				82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */,
+				C4E9473A1FC18D4400C7B1BE /* ModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +689,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQ5T3Y9HAT;
+				DEVELOPMENT_TEAM = SARZD5PTNB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
@@ -703,7 +710,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQ5T3Y9HAT;
+				DEVELOPMENT_TEAM = SARZD5PTNB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
