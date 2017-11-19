@@ -28,6 +28,7 @@
 		C4E9472F1FC13B4000C7B1BE /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C4E9472C1FC13B3F00C7B1BE /* AcousticModelEnglish.bundle */; };
 		C4E947301FC13B4000C7B1BE /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E9472D1FC13B4000C7B1BE /* OpenEars.framework */; };
 		C4E947311FC13B4000C7B1BE /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E9472E1FC13B4000C7B1BE /* Slt.framework */; };
+		C5E257CA1FC14DC4003F7522 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E257C91FC14DC4003F7522 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		C4E9472D1FC13B4000C7B1BE /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEars.framework; path = Framework/OpenEars.framework; sourceTree = "<group>"; };
 		C4E9472E1FC13B4000C7B1BE /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slt.framework; path = Framework/Slt.framework; sourceTree = "<group>"; };
 		C4E947321FC13B6900C7B1BE /* OpenEarsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenEarsHeader.h; sourceTree = "<group>"; };
+		C5E257C91FC14DC4003F7522 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		D598C6BD4A4CA27E00F63506 /* Pods-FaceTrakingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingUITests/Pods-FaceTrakingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E71834D6AF6A4A879093BD03 /* Pods-FaceTraking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTraking.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking.release.xcconfig"; sourceTree = "<group>"; };
 		F70FE99A2562EA2202E309FB /* Pods_FaceTraking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTraking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 		82102EE81FBC2A4F00C6D1EA = {
 			isa = PBXGroup;
 			children = (
+				C5E257C91FC14DC4003F7522 /* CircleView.swift */,
 				82102EF31FBC2A4F00C6D1EA /* ah */,
 				82102F081FBC2A4F00C6D1EA /* FaceTraking_DepthImageTests */,
 				82102F131FBC2A4F00C6D1EA /* FaceTraking_DepthImageUITests */,
@@ -505,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E257CA1FC14DC4003F7522 /* CircleView.swift in Sources */,
 				58A729D81FC109D3006500C8 /* InstructionsViewController.swift in Sources */,
 				58C4338F1FC16CF000E0F5D5 /* VowelsViewController.swift in Sources */,
 				C4E947251FC12AFB00C7B1BE /* FaceScoreViewController.swift in Sources */,
