@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not in Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdp-hP-VxE">
-                                <rect key="frame" x="140" y="395.66666666666669" width="95.333333333333314" height="21"/>
+                                <rect key="frame" x="140" y="395.66666666666669" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score Board, and facial correction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keR-iq-gFc">
-                                <rect key="frame" x="57.333333333333343" y="88" width="259.33333333333326" height="20.333333333333329"/>
+                                <rect key="frame" x="58" y="88" width="259" height="20.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -179,16 +179,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retry?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnD-bf-BXM">
-                                <rect key="frame" x="151.33333333333334" y="88" width="72.333333333333343" height="31.333333333333329"/>
+                                <rect key="frame" x="151.33333333333334" y="44" width="72.333333333333343" height="31.333333333333329"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9tY-v6-3yf">
-                                <rect key="frame" x="128" y="119.33333333333334" width="120" height="401.33333333333326"/>
+                                <rect key="frame" x="127.66666666666669" y="75.333333333333343" width="120" height="480.33333333333326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fI3-Cc-4RK">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="200.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="240.33333333333334"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Retry"/>
                                         <connections>
@@ -196,7 +196,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etl-GU-rtO">
-                                        <rect key="frame" x="0.0" y="200.66666666666669" width="120" height="200.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="240.33333333333337" width="120" height="240"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Main Menu"/>
                                         <connections>
@@ -402,7 +402,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMd-LZ-vP2">
-                                <rect key="frame" x="125" y="101.33333333333333" width="125.66666666666669" height="27.999999999999986"/>
+                                <rect key="frame" x="124.66666666666669" y="101.33333333333333" width="126" height="27.999999999999986"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Instructions">
                                         <attributes>
@@ -442,13 +442,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ah!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sos-Nc-yRx">
-                                <rect key="frame" x="129.66666666666666" y="358.33333333333331" width="115" height="95.666666666666686"/>
+                                <rect key="frame" x="130" y="358" width="115" height="96"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dl-no-5Su">
-                                <rect key="frame" x="136" y="561" width="102" height="72"/>
+                                <rect key="frame" x="136.66666666666666" y="561" width="102" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -516,7 +516,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not in Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuL-so-Kz7">
-                                <rect key="frame" x="140" y="395.66666666666669" width="95.333333333333314" height="21"/>
+                                <rect key="frame" x="140" y="395.66666666666669" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -579,7 +579,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not in Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-zi-z4r">
-                                <rect key="frame" x="140" y="395.66666666666669" width="95.333333333333314" height="21"/>
+                                <rect key="frame" x="140" y="395.66666666666669" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -601,8 +601,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="m1U-zq-wjE"/>
         <segue reference="auG-XN-djD"/>
-        <segue reference="WkA-Hy-wxG"/>
     </inferredMetricsTieBreakers>
 </document>
