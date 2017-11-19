@@ -31,10 +31,9 @@ class RetryViewController: UIViewController {
     }
     */
     @IBAction func retry(_ sender: Any) {
-//        precondition(navigationController != nil)
         
         for vc in navigationController!.viewControllers {
-            // Check if the view controller is of MyGroupViewController type
+            // Look for the ViewController where FacialRecognition starts
             if vc.title == "FacialRecognition" {
                 self.navigationController?.popToViewController(vc, animated: true)
             }
@@ -42,7 +41,7 @@ class RetryViewController: UIViewController {
     }
     
     @IBAction func mainMenu(_ sender: Any) {
-    // Check if the view controller is of MyGroupViewController type
+    // Go back to top
     navigationController?.popToRootViewController(animated: true)
     }
 }
