@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58A729D61FC10853006500C8 /* Ah.mov in Resources */ = {isa = PBXBuildFile; fileRef = 58A729D51FC10852006500C8 /* Ah.mov */; };
+		58A729D81FC109D3006500C8 /* InstructionsVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A729D71FC109D3006500C8 /* InstructionsVCViewController.swift */; };
 		82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82102EF41FBC2A4F00C6D1EA /* AppDelegate.swift */; };
 		82102EF71FBC2A4F00C6D1EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82102EF61FBC2A4F00C6D1EA /* ViewController.swift */; };
 		82102EFA1FBC2A4F00C6D1EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82102EF81FBC2A4F00C6D1EA /* Main.storyboard */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58A729D11FC1064D006500C8 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		58A729D21FC1064D006500C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		58A729D51FC10852006500C8 /* Ah.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Ah.mov; sourceTree = "<group>"; };
+		58A729D71FC109D3006500C8 /* InstructionsVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsVCViewController.swift; sourceTree = "<group>"; };
 		82102EF11FBC2A4F00C6D1EA /* FaceTraking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceTraking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82102EF41FBC2A4F00C6D1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82102EF61FBC2A4F00C6D1EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58A729D01FC1064C006500C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58A729D21FC1064D006500C8 /* AVFoundation.framework */,
+				58A729D11FC1064D006500C8 /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		82102EE81FBC2A4F00C6D1EA = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +96,7 @@
 				82102F081FBC2A4F00C6D1EA /* FaceTraking_DepthImageTests */,
 				82102F131FBC2A4F00C6D1EA /* FaceTraking_DepthImageUITests */,
 				82102EF21FBC2A4F00C6D1EA /* Products */,
+				58A729D01FC1064C006500C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +113,14 @@
 		82102EF31FBC2A4F00C6D1EA /* ah */ = {
 			isa = PBXGroup;
 			children = (
+				58A729D51FC10852006500C8 /* Ah.mov */,
 				82102EF41FBC2A4F00C6D1EA /* AppDelegate.swift */,
 				82102EF61FBC2A4F00C6D1EA /* ViewController.swift */,
 				82102EF81FBC2A4F00C6D1EA /* Main.storyboard */,
 				82102EFB1FBC2A4F00C6D1EA /* Assets.xcassets */,
 				82102EFD1FBC2A4F00C6D1EA /* LaunchScreen.storyboard */,
 				82102F001FBC2A4F00C6D1EA /* Info.plist */,
+				58A729D71FC109D3006500C8 /* InstructionsVCViewController.swift */,
 			);
 			path = ah;
 			sourceTree = "<group>";
@@ -235,6 +253,7 @@
 				82102EFF1FBC2A4F00C6D1EA /* LaunchScreen.storyboard in Resources */,
 				82102EFC1FBC2A4F00C6D1EA /* Assets.xcassets in Resources */,
 				82102EFA1FBC2A4F00C6D1EA /* Main.storyboard in Resources */,
+				58A729D61FC10853006500C8 /* Ah.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58A729D81FC109D3006500C8 /* InstructionsVCViewController.swift in Sources */,
 				82102EF71FBC2A4F00C6D1EA /* ViewController.swift in Sources */,
 				82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */,
 			);
@@ -427,7 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SARZD5PTNB;
+				DEVELOPMENT_TEAM = XQ5T3Y9HAT;
 				INFOPLIST_FILE = "$(SRCROOT)/ah/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.toshihiroGotoh.FaceTraking-DepthImage";
@@ -442,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SARZD5PTNB;
+				DEVELOPMENT_TEAM = XQ5T3Y9HAT;
 				INFOPLIST_FILE = "$(SRCROOT)/ah/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.toshihiroGotoh.FaceTraking-DepthImage";
