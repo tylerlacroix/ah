@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,38 +44,6 @@
             </objects>
             <point key="canvasLocation" x="3225" y="396"/>
         </scene>
-        <!--FacialRecognition-->
-        <scene sceneID="QJi-ps-SfD">
-            <objects>
-                <viewController title="FacialRecognition" id="esR-hO-G9B" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nfE-G2-LM1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fn-36-cG0">
-                                <rect key="frame" x="125" y="391" width="125" height="30"/>
-                                <state key="normal" title="Facial Recognition"/>
-                                <connections>
-                                    <segue destination="lg5-XV-M9H" kind="show" id="p6u-OR-G15"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="0fn-36-cG0" firstAttribute="centerX" secondItem="nfE-G2-LM1" secondAttribute="centerX" id="QJf-1K-v9W"/>
-                            <constraint firstItem="0fn-36-cG0" firstAttribute="centerY" secondItem="nfE-G2-LM1" secondAttribute="centerY" id="UZH-Rv-Hcz"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="9k3-D9-F47"/>
-                    </view>
-                    <connections>
-                        <segue destination="lg5-XV-M9H" kind="show" id="auG-XN-djD"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IKM-9G-wtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4860" y="-333"/>
-        </scene>
         <!--Face Score View Controller-->
         <scene sceneID="ggo-0M-OpO">
             <objects>
@@ -85,19 +52,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wag-fB-6rR">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wag-fB-6rR">
                                 <rect key="frame" x="40" y="704" width="295" height="30"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ai7-MI-hNp">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ai7-MI-hNp">
                                         <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.39391601754566807" blue="0.17150808799247697" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7U-V5-JQm">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7U-V5-JQm">
                                         <rect key="frame" x="98.333333333333343" y="0.0" width="98.333333333333343" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.95933953764408963" blue="0.22726539466977735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44V-9u-U5L">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44V-9u-U5L">
                                         <rect key="frame" x="196.66666666666666" y="0.0" width="98.333333333333343" height="30"/>
                                         <color key="backgroundColor" red="0.52131752953946742" green="1" blue="0.096595197135374788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
@@ -106,8 +72,9 @@
                                     <constraint firstAttribute="height" constant="30" id="Dac-QB-JDt"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOg-4O-Gnj">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOg-4O-Gnj">
                                 <rect key="frame" x="40" y="734" width="295" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -116,10 +83,6 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score Board, and facial correction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keR-iq-gFc">
                                 <rect key="frame" x="57.333333333333343" y="44" width="259.33333333333326" height="20.333333333333329"/>
-=======
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score Board, and facial correction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keR-iq-gFc">
-                                <rect key="frame" x="58" y="88" width="259" height="20.666666666666671"/>
->>>>>>> origin/ui
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -208,6 +171,7 @@
             </objects>
             <point key="canvasLocation" x="5925.6000000000004" y="-327.33990147783254"/>
         </scene>
+<<<<<<< HEAD
         <!--Retry View Controller-->
         <scene sceneID="euJ-9R-wlG">
             <objects>
@@ -223,11 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9tY-v6-3yf">
-<<<<<<< HEAD
                                 <rect key="frame" x="128" y="75.333333333333343" width="120" height="480.33333333333326"/>
-=======
-                                <rect key="frame" x="127.66666666666669" y="75.333333333333343" width="120" height="480.33333333333326"/>
->>>>>>> origin/ui
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fI3-Cc-4RK">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="240.33333333333334"/>
@@ -263,6 +223,8 @@
             </objects>
             <point key="canvasLocation" x="6885.6000000000004" y="-326.60098522167488"/>
         </scene>
+=======
+>>>>>>> origin/ui
         <!--Vowels-->
         <scene sceneID="5L9-Mu-QC9">
             <objects>
@@ -283,11 +245,7 @@
         <!--Vowels-->
         <scene sceneID="c91-AF-akl">
             <objects>
-<<<<<<< HEAD
                 <viewController id="Gfo-UD-qrV" customClass="BubbleViewController" customModule="FaceTraking" customModuleProvider="target" sceneMemberID="viewController">
-=======
-                <viewController id="Gfo-UD-qrV" customClass="VowelsViewController" customModule="FaceTraking" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> origin/ui
                     <view key="view" contentMode="scaleToFill" id="9d0-H3-1aO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,11 +270,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-<<<<<<< HEAD
-                                            <segue destination="2O9-FE-3Zy" kind="presentation" id="ZfF-Db-xte"/>
-=======
-                                            <action selector="transitionVowel:" destination="Gfo-UD-qrV" eventType="touchUpInside" id="j86-GL-OhA"/>
->>>>>>> origin/ui
+                                            <action selector="transitionVowel:" destination="Gfo-UD-qrV" eventType="touchUpInside" id="2Nf-OU-PUE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdW-1k-zqc">
@@ -404,11 +358,8 @@
                     <tabBarItem key="tabBarItem" title="Vowels" id="HpW-AQ-LEX"/>
                     <navigationItem key="navigationItem" id="3BS-5t-UOt"/>
                     <connections>
-<<<<<<< HEAD
-                        <outlet property="transitionButton" destination="EGJ-Rk-S3I" id="AzW-02-CSg"/>
-=======
-                        <segue destination="2O9-FE-3Zy" kind="show" identifier="InstructionsSegue" id="frN-kD-hJc"/>
->>>>>>> origin/ui
+                        <outlet property="transitionButton" destination="EGJ-Rk-S3I" id="W2s-JJ-1Kx"/>
+                        <segue destination="2O9-FE-3Zy" kind="presentation" identifier="InstructionsSegue" id="srv-xG-HV3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCu-6m-baF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -426,7 +377,6 @@
         <!--Instructions View Controller-->
         <scene sceneID="wZ8-gX-e96">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hNU-pf-pe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="2O9-FE-3Zy" customClass="InstructionsViewController" customModule="FaceTraking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FDL-kf-C5j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -443,7 +393,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="esR-hO-G9B" kind="show" id="K2M-a1-PDt"/>
+                                    <segue destination="lg5-XV-M9H" kind="show" identifier="faceSegue" id="bnM-j4-hqn"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-Tt-5b4">
@@ -456,11 +406,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMd-LZ-vP2">
-<<<<<<< HEAD
                                 <rect key="frame" x="125" y="57.333333333333343" width="125.66666666666669" height="28"/>
-=======
-                                <rect key="frame" x="124.66666666666669" y="101.33333333333333" width="126" height="27.999999999999986"/>
->>>>>>> origin/ui
                                 <attributedString key="attributedText">
                                     <fragment content="Instructions">
                                         <attributes>
@@ -515,6 +461,7 @@
                         <viewLayoutGuide key="safeArea" id="UEM-Cz-jFH"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNU-pf-pe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3941.5999999999999" y="-333.25123152709364"/>
         </scene>
@@ -540,7 +487,7 @@
                                     <segue destination="Nwg-jN-PZM" kind="show" id="pHN-lb-tJX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AH.png" translatesAutoresizingMaskIntoConstraints="NO" id="crZ-x3-9rh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="crZ-x3-9rh">
                                 <rect key="frame" x="67" y="199" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -689,10 +636,4 @@
             <point key="canvasLocation" x="3225" y="1130"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="AH.png" width="399" height="410"/>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="auG-XN-djD"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -418,8 +418,8 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
 
 // MARK: - UIImagePickerController
 let baseline_vals = ["ay": [0.29882529377937317, 0.18682879209518433, 0.095764830708503723, 0.064638502895832062, 0.043682102113962173, 0.03534390777349472, 0.30295950174331665, 0.28203269839286804],
-                     "ee": [0.29534530639648438, 0.098746322095394135, 0.059916939586400986, 0.030544735491275787, 0.082186266779899597, 0.059691216796636581, 0.14546316862106323, 0.13629485666751862],
-                     "oo": [0.40730521082878113, 0.5015183687210083, 0.29134848713874817, 0.6643710732460022, 0.0075245881453156471, 0.0068613495677709579, 0.10257617384195328, 0.11918935924768448]]
+                     "ee": [0.1122453408,0.1046263104,0.01547330727,0.04486234835,0.2405471156,0.2153886408,0.3041163385,0.3020832638],
+                     "oo": [0.1502567939,0.2337069611,0.1084855422,0.4298841109,0.01796273235,0.01092089247,0.1611879418,0.1509508441]]
 
 extension FaceScoreViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func calcScore() -> (Double,Double,Int) {
@@ -437,6 +437,11 @@ extension FaceScoreViewController: UINavigationControllerDelegate, UIImagePicker
         let mouthStretchRight = (shapes[ARFaceAnchor.BlendShapeLocation.mouthStretchRight] as! Double)
         
         let actual = [jawOpen, mouthFunnel, mouthClose, mouthPucker, mouthDimpleLeft, mouthDimpleRight, mouthStretchLeft, mouthStretchRight]
+        
+        print("\nNEW\n")
+        for i in actual {
+            print(i)
+        }
         
         return maxError(baseline: baseline_vals[phoneme]!, actual: actual)
     }

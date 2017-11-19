@@ -16,7 +16,6 @@
 		58C433961FC1753600E0F5D5 /* Ee(i).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 58C433921FC1753600E0F5D5 /* Ee(i).mp4 */; };
 		58C433971FC1753600E0F5D5 /* Oh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 58C433931FC1753600E0F5D5 /* Oh.mp4 */; };
 		58FC8B6F1FC11D76009535E9 /* Ah.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 58FC8B6E1FC11D76009535E9 /* Ah.mp4 */; };
-		58FC8B711FC125F7009535E9 /* RetryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FC8B701FC125F7009535E9 /* RetryViewController.swift */; };
 		6ECCB8208A8A000A37CE7E2F /* Pods_FaceTrakingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8EA045F0C317844E4FD269 /* Pods_FaceTrakingUITests.framework */; };
 		82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82102EF41FBC2A4F00C6D1EA /* AppDelegate.swift */; };
 		82102EFA1FBC2A4F00C6D1EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82102EF81FBC2A4F00C6D1EA /* Main.storyboard */; };
@@ -28,12 +27,8 @@
 		C4E9472F1FC13B4000C7B1BE /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C4E9472C1FC13B3F00C7B1BE /* AcousticModelEnglish.bundle */; };
 		C4E947301FC13B4000C7B1BE /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E9472D1FC13B4000C7B1BE /* OpenEars.framework */; };
 		C4E947311FC13B4000C7B1BE /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E9472E1FC13B4000C7B1BE /* Slt.framework */; };
-<<<<<<< HEAD
-		C4E947341FC1601000C7B1BE /* BubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E947331FC1601000C7B1BE /* BubbleViewController.swift */; };
-		C4E947361FC1611700C7B1BE /* AH.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E947351FC1611700C7B1BE /* AH.png */; };
-=======
+		C4E947381FC180EF00C7B1BE /* BubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E947371FC180EE00C7B1BE /* BubbleViewController.swift */; };
 		C5E257CA1FC14DC4003F7522 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E257C91FC14DC4003F7522 /* CircleView.swift */; };
->>>>>>> origin/ui
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +63,6 @@
 		58C433921FC1753600E0F5D5 /* Ee(i).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ee(i).mp4"; sourceTree = "<group>"; };
 		58C433931FC1753600E0F5D5 /* Oh.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Oh.mp4; sourceTree = "<group>"; };
 		58FC8B6E1FC11D76009535E9 /* Ah.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ah.mp4; sourceTree = "<group>"; };
-		58FC8B701FC125F7009535E9 /* RetryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryViewController.swift; sourceTree = "<group>"; };
 		5EB89DE948E7A2AFF9055168 /* Pods_FaceTrakingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTrakingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82102EF11FBC2A4F00C6D1EA /* FaceTraking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceTraking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82102EF41FBC2A4F00C6D1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,12 +81,8 @@
 		C4E9472D1FC13B4000C7B1BE /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEars.framework; path = Framework/OpenEars.framework; sourceTree = "<group>"; };
 		C4E9472E1FC13B4000C7B1BE /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slt.framework; path = Framework/Slt.framework; sourceTree = "<group>"; };
 		C4E947321FC13B6900C7B1BE /* OpenEarsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenEarsHeader.h; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		C4E947331FC1601000C7B1BE /* BubbleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleViewController.swift; sourceTree = "<group>"; };
-		C4E947351FC1611700C7B1BE /* AH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AH.png; sourceTree = "<group>"; };
-=======
+		C4E947371FC180EE00C7B1BE /* BubbleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleViewController.swift; sourceTree = "<group>"; };
 		C5E257C91FC14DC4003F7522 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
->>>>>>> origin/ui
 		D598C6BD4A4CA27E00F63506 /* Pods-FaceTrakingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingUITests/Pods-FaceTrakingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E71834D6AF6A4A879093BD03 /* Pods-FaceTraking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTraking.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking.release.xcconfig"; sourceTree = "<group>"; };
 		F70FE99A2562EA2202E309FB /* Pods_FaceTraking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTraking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,25 +159,20 @@
 		82102EF31FBC2A4F00C6D1EA /* ah */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				C4E947351FC1611700C7B1BE /* AH.png */,
-=======
+				C4E947371FC180EE00C7B1BE /* BubbleViewController.swift */,
 				58C433921FC1753600E0F5D5 /* Ee(i).mp4 */,
 				58C433911FC1753600E0F5D5 /* Eh.mp4 */,
 				58C433931FC1753600E0F5D5 /* Oh.mp4 */,
 				58C433901FC1753600E0F5D5 /* oo(u).mp4 */,
->>>>>>> origin/ui
 				58FC8B6E1FC11D76009535E9 /* Ah.mp4 */,
 				82102EF41FBC2A4F00C6D1EA /* AppDelegate.swift */,
 				C4E947241FC12AFB00C7B1BE /* FaceScoreViewController.swift */,
 				82102EF81FBC2A4F00C6D1EA /* Main.storyboard */,
-				C4E947331FC1601000C7B1BE /* BubbleViewController.swift */,
 				82102EFB1FBC2A4F00C6D1EA /* Assets.xcassets */,
 				82102EFD1FBC2A4F00C6D1EA /* LaunchScreen.storyboard */,
 				82102F001FBC2A4F00C6D1EA /* Info.plist */,
 				58A729D71FC109D3006500C8 /* InstructionsViewController.swift */,
 				C4E947321FC13B6900C7B1BE /* OpenEarsHeader.h */,
-				58FC8B701FC125F7009535E9 /* RetryViewController.swift */,
 				58C4338E1FC16CF000E0F5D5 /* VowelsViewController.swift */,
 			);
 			path = ah;
@@ -340,7 +325,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E947361FC1611700C7B1BE /* AH.png in Resources */,
 				58FC8B6F1FC11D76009535E9 /* Ah.mp4 in Resources */,
 				58C433951FC1753600E0F5D5 /* Eh.mp4 in Resources */,
 				82102EFF1FBC2A4F00C6D1EA /* LaunchScreen.storyboard in Resources */,
@@ -528,8 +512,11 @@
 				58A729D81FC109D3006500C8 /* InstructionsViewController.swift in Sources */,
 				58C4338F1FC16CF000E0F5D5 /* VowelsViewController.swift in Sources */,
 				C4E947251FC12AFB00C7B1BE /* FaceScoreViewController.swift in Sources */,
+<<<<<<< HEAD
 				58FC8B711FC125F7009535E9 /* RetryViewController.swift in Sources */,
-				C4E947341FC1601000C7B1BE /* BubbleViewController.swift in Sources */,
+				C4E947381FC180EF00C7B1BE /* BubbleViewController.swift in Sources */,
+=======
+>>>>>>> origin/ui
 				82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,7 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SARZD5PTNB;
+				DEVELOPMENT_TEAM = XQ5T3Y9HAT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
@@ -719,7 +706,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SARZD5PTNB;
+				DEVELOPMENT_TEAM = XQ5T3Y9HAT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
