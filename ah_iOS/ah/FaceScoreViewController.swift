@@ -19,7 +19,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
     var pathToFirstDynamicallyGeneratedDictionary: String!
     var pathToSecondDynamicallyGeneratedLanguageModel: String!
     var pathToSecondDynamicallyGeneratedDictionary: String!
-    var timer: Timer!
     
     @IBOutlet var resetButton:UIButton!
     
@@ -68,6 +67,8 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
             
             do {
                 try OEPocketsphinxController.sharedInstance().setActive(true) // Setting the shared OEPocketsphinxController active is necessary before any of its properties are accessed.
+                OEPocketsphinxController.sharedInstance().vadThreshold = 3.5
+                OEPocketsphinxController.sharedInstance().secondsOfSilenceToDetect = 0.1
             }
             catch {
                 print("Error: it wasn't possible to set the shared instance to active: \"\(error)\"")
@@ -78,7 +79,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
             if(!OEPocketsphinxController.sharedInstance().isListening) {
                 OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false)
             }
-            startDisplayingLevels()
         }
         
         
@@ -233,9 +233,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
             }
         }
         
-        
-        
-        
         if(!OEPocketsphinxController.sharedInstance().isListening) {
             OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false) // Start speech recognition, but only if we aren't already listening.
         }
@@ -341,81 +338,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
                 OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false) // Start speech recognition, but only if we aren't already listening.
             }
         })
-    }
-    
-    
-    /** The user prompt to get mic permissions, or a check of the mic permissions, has completed with a true or a false result  (will only be returned on iOS7 or later).*/
-    
-    func micPermissionCheckCompleted(withResult: Bool) {
-        if(withResult) {
-            
-            self.restartAttemptsDueToPermissionRequests += 1
-            if(self.restartAttemptsDueToPermissionRequests == 1 && self.startupFailedDueToLackOfPermissions) { // If we get here because there was an attempt to start which failed due to lack of permissions, and now permissions have been requested and they returned true, we restart exactly once with the new permissions.
-                
-                if(!OEPocketsphinxController.sharedInstance().isListening) {
-                    OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false) // Start speech recognition, but only if we aren't already listening.
-                }
-                
-                self.startupFailedDueToLackOfPermissions = false
-            }
-        }
-        
-    }
-    
-    
-    
-    // This is not OpenEars-specific stuff, just some UI behavior
-    
-    @IBAction func suspendListeningButtonAction() { // This is the action for the button which suspends listening without ending the recognition loop
-        
-        
-        OEPocketsphinxController.sharedInstance().suspendRecognition()
-    }
-    
-    @IBAction func resumeListeningButtonAction() { // This is the action for the button which resumes listening if it has been suspended
-        OEPocketsphinxController.sharedInstance().resumeRecognition()
-    }
-    
-    @IBAction func stopButtonAction() { // This is the action for the button which shuts down the recognition loop.
-        if(OEPocketsphinxController.sharedInstance().isListening){
-            let stopListeningError: Error! = OEPocketsphinxController.sharedInstance().stopListening()
-            if(stopListeningError != nil) {
-                print("Error while stopping listening in pocketsphinxFailedNoMicPermissions: \(stopListeningError)")
-            }
-        }
-    }
-    
-    @IBAction func startButtonAction() { // This is the action for the button which starts up the recognition loop again if it has been shut down.
-        if(!OEPocketsphinxController.sharedInstance().isListening) {
-            OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false) // Start speech recognition, but only if we aren't already listening.
-        }
-    }
-    
-    @IBAction func banana() {
-        OEPocketsphinxController.sharedInstance().vadThreshold = 3.5
-        OEPocketsphinxController.sharedInstance().secondsOfSilenceToDetect = 0.1
-        
-    }
-    
-    // What follows are not OpenEars methods, just an approach for level reading
-    // that I've included with this sample app. My example implementation does make use of two OpenEars
-    // methods:    the pocketsphinxInputLevel method of OEPocketsphinxController and the fliteOutputLevel
-    // method of OEFliteController.
-    //
-    // The example is meant to show one way that you can read those levels continuously without locking the UI,
-    // by using an NSTimer, but the OpenEars level-reading methods
-    // themselves do not include multithreading code since I believe that you will want to design your own
-    // code approaches for level display that are tightly-integrated with your interaction design and the
-    // graphics API you choose.
-    //
-    // Please note that if you use my sample approach, you should pay attention to the way that the timer is always stopped in
-    // dealloc. This should prevent you from having any difficulties with deallocating a class due to a running NSTimer process.
-    
-    func startDisplayingLevels() { // Start displaying the levels using a timer
-        if(self.timer != nil) {
-            self.timer.invalidate()
-        }
-        
     }
 }
 
