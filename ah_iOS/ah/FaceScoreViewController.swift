@@ -8,6 +8,8 @@ import UIKit
 import ARKit
 
 class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCNViewDelegate, ARSessionDelegate {
+    public var phoneme = "oo"
+    
     var slt = Slt()
     var openEarsEventsObserver = OEEventsObserver()
     var fliteController = OEFliteController()
@@ -21,6 +23,11 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
     var pathToSecondDynamicallyGeneratedDictionary: String!
     
     @IBOutlet var resetButton:UIButton!
+    @IBOutlet var mouthShapeCircleView:CircleView!
+    @IBOutlet var pronounciationCircleView:CircleView!
+    @IBOutlet var mouthShapePercent:UILabel!
+    @IBOutlet var pronounciationPercent:UILabel!
+    @IBOutlet var tipLabel:UILabel!
     
     // ARSCNView
     @IBOutlet var sceneView: ARSCNView!
@@ -45,16 +52,7 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
         
         // This is the language model (vocabulary) we're going to start up with. You can replace these words with the words you want to use.
         
-        let firstLanguageArray = [
-            "ee"/*,
-             "ah",
-             "ee",
-             "eh",
-             "eye",
-             "oh",
-             "oo",
-             "you",
-             "hell"*/]
+        let firstLanguageArray = [phoneme]
         let firstVocabularyName = "FirstVocabulary"
         let firstLanguageModelGenerationError: Error! = languageModelGenerator.generateLanguageModel(from: firstLanguageArray, withFilesNamed: firstVocabularyName, forAcousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"))
         
@@ -68,7 +66,7 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
             do {
                 try OEPocketsphinxController.sharedInstance().setActive(true) // Setting the shared OEPocketsphinxController active is necessary before any of its properties are accessed.
                 OEPocketsphinxController.sharedInstance().vadThreshold = 3.5
-                OEPocketsphinxController.sharedInstance().secondsOfSilenceToDetect = 0.1
+                OEPocketsphinxController.sharedInstance().secondsOfSilenceToDetect = 0.5
             }
             catch {
                 print("Error: it wasn't possible to set the shared instance to active: \"\(error)\"")
@@ -94,17 +92,103 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
         sceneView.automaticallyUpdatesLighting = true
         
         // virtualFaceNode - ARSCNFaceGeometry
-//        let device = sceneView.device!
-//        let maskGeometry = ARSCNFaceGeometry(device: device)!
-//        
-//        maskGeometry.firstMaterial?.diffuse.contents = UIColor.lightGray
-//        maskGeometry.firstMaterial?.lightingModel = .physicallyBased
-//        
-//        virtualFaceNode.geometry = maskGeometry
-//        
-//        resetTracking()
+        /*let device = sceneView.device!
+        let maskGeometry = ARSCNFaceGeometry(device: device)!
+        
+        maskGeometry.firstMaterial?.diffuse.contents = UIColor.lightGray
+        maskGeometry.firstMaterial?.lightingModel = .physicallyBased
+        
+        virtualFaceNode.geometry = maskGeometry
+
+        resetTracking()*/
         
         //self.addTapGesture()
+    }
+    
+    var detectedAudio = false
+    var mouthShapeScore = (0.0,0.0,0)
+    var pronounciationScore = 0.0
+    
+    @IBAction func startTest() {
+        if(!OEPocketsphinxController.sharedInstance().isListening) {
+            OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false) // Start speech recognition, but only if we aren't already listening.
+        }
+        
+        var timerCount = 25
+        detectedAudio = false
+        mouthShapeScore = (0.0,0.0,0)
+        pronounciationScore = 0.0
+        
+        //resetButton.titleLabel!.text = "Processing..."
+        resetButton.setTitle("Processing...", for: UIControlState.normal)
+        resetButton.isEnabled = false
+        
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
+            timerCount -= 1
+            let score = self.calcScore()
+            
+            if score.0 > self.mouthShapeScore.0 {
+                self.mouthShapeScore = score
+            }
+            
+            if timerCount == 0 {
+                timer.invalidate()
+                self.endTest()
+            }
+        }
+    }
+    
+    func pocketsphinxDidReceiveHypothesis(_ hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
+        print(recognitionScore)
+        let score = 1/(1+pow(M_E, (-0.0002*Double(recognitionScore)!-4.4985)))
+        detectedAudio = true
+        
+        if (score > pronounciationScore) {
+            pronounciationScore = score
+        }
+        
+        print("Local callback: The received hypothesis is \(hypothesis!) with a score of \(score) and an ID of \(utteranceID!)")
+        
+        // This is how to use an available instance of OEFliteController. We're going to repeat back the command that we heard with the voice we've chosen.
+        // self.fliteController.say(_:"You said \(hypothesis!)", with:self.slt)
+    }
+    
+    let correction_strings = [["Open your jaw more!", "Close your jaw more!"],
+                              ["Move your mouth forward!", "Move your mouth backward!"],
+                              ["Open your lips more!", "Close your lips more!"],
+                              ["Pucker your mouth more!", "Pucker your mouth less!"],
+                              ["Move the left side of your mouth back!", "Move the left side of your mouth forward!"],
+                              ["Move the right side of your mouth back!", "Move the right side of your mouth forward!"],
+                              ["Stretch your mouth more!", "Stretch your mouth less!"],
+                              ["Stretch your mouth more!", "Stretch your mouth less!"]]
+    
+    func endTest() {
+        if(OEPocketsphinxController.sharedInstance().isListening){
+            let stopListeningError: Error! = OEPocketsphinxController.sharedInstance().stopListening()
+            if(stopListeningError != nil) {
+                print("Error while stopping listening in pocketsphinxFailedNoMicPermissions: \(stopListeningError)")
+            }
+        }
+        
+        resetButton.setTitle("Go!", for: UIControlState.normal)
+        resetButton.isEnabled = true
+        
+        mouthShapeCircleView.animateCircle(percent:CGFloat(mouthShapeScore.0), duration: 0.5)
+        mouthShapePercent.text = String(Int(100*mouthShapeScore.0)) + "%"
+        
+        if mouthShapeScore.0 < 0.8 {
+            tipLabel.text = correction_strings[mouthShapeScore.2][mouthShapeScore.1 > 0 ? 0 : 1]
+        } else {
+            tipLabel.text = "Good!"
+        }
+        
+        if detectedAudio == false {
+            tipLabel.text = "No audio detected!"
+            pronounciationScore = 0.005
+        }
+        
+        pronounciationCircleView.animateCircle(percent:CGFloat(pronounciationScore), duration: 0.5)
+        pronounciationPercent.text = String(Int(100*pronounciationScore)) + "%"
     }
     
     override func didReceiveMemoryWarning() {
@@ -187,15 +271,6 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
         }
     }
     
-    
-    func pocketsphinxDidReceiveHypothesis(_ hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
-        print(recognitionScore)
-        let score = String(Int(100/(1+pow(M_E, (-0.0002*Double(recognitionScore)!-4.4985)))))
-        print("Local callback: The received hypothesis is \(hypothesis!) with a score of \(score) and an ID of \(utteranceID!)")
-        
-        // This is how to use an available instance of OEFliteController. We're going to repeat back the command that we heard with the voice we've chosen.
-        self.fliteController.say(_:"You said \(hypothesis!)", with:self.slt)
-    }
     // An optional delegate method of OEEventsObserver which informs that the interruption to the audio session ended.
     func audioSessionInterruptionDidEnd() {
         print("Local callback:  AudioSession interruption ended.") // Log it.
@@ -342,65 +417,39 @@ class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCN
 }
 
 // MARK: - UIImagePickerController
-let baseline_vals = ["ay": [0.298766956, 0.142167151, 0.085799411, 0.133791447, 0.038765031, 0.023759159],
-                     "ee": [0.168310106, 0.10076052, 0.035495957, 0.088527273, 0.063122351, 0.041300956],
-                     "oo": [0.177990764, 0.293824002, 0.161934374, 0.850610912, 0.005674623, 0.004009779]]
-
-let correction_strings = [["Open your jaw more!", "Close your jaw more!"],
-                          ["Move your mouth forward!", "Move your mouth backward!"],
-                          ["Open your lips more!", "Close your lips more!"],
-                          ["Pucker your mouth more!", "Pucker your mouth less!"],
-                          ["Move the left side of your mouth back!", "Move the left side of your mouth forward!"],
-                          ["Move the right side of your mouth back!", "Move the right side of your mouth forward!"]]
+let baseline_vals = ["ay": [0.29882529377937317, 0.18682879209518433, 0.095764830708503723, 0.064638502895832062, 0.043682102113962173, 0.03534390777349472, 0.30295950174331665, 0.28203269839286804],
+                     "ee": [0.29534530639648438, 0.098746322095394135, 0.059916939586400986, 0.030544735491275787, 0.082186266779899597, 0.059691216796636581, 0.14546316862106323, 0.13629485666751862],
+                     "oo": [0.40730521082878113, 0.5015183687210083, 0.29134848713874817, 0.6643710732460022, 0.0075245881453156471, 0.0068613495677709579, 0.10257617384195328, 0.11918935924768448]]
 
 extension FaceScoreViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    func addTapGesture(){
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        sceneView.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
+    func calcScore() -> (Double,Double,Int) {
+        if shapes.count == 0 {
+            return (0.0,0.0,0)
+        }
+        
         let jawOpen = (shapes[ARFaceAnchor.BlendShapeLocation.jawOpen] as! Double)
         let mouthFunnel = (shapes[ARFaceAnchor.BlendShapeLocation.mouthFunnel] as! Double)
         let mouthClose = (shapes[ARFaceAnchor.BlendShapeLocation.mouthClose] as! Double)
         let mouthPucker = (shapes[ARFaceAnchor.BlendShapeLocation.mouthPucker] as! Double)
         let mouthDimpleLeft = (shapes[ARFaceAnchor.BlendShapeLocation.mouthDimpleLeft] as! Double)
         let mouthDimpleRight = (shapes[ARFaceAnchor.BlendShapeLocation.mouthDimpleRight] as! Double)
+        let mouthStretchLeft = (shapes[ARFaceAnchor.BlendShapeLocation.mouthStretchLeft] as! Double)
+        let mouthStretchRight = (shapes[ARFaceAnchor.BlendShapeLocation.mouthStretchRight] as! Double)
         
-        let actual = [jawOpen, mouthFunnel, mouthClose, mouthPucker, mouthDimpleLeft, mouthDimpleRight]
+        let actual = [jawOpen, mouthFunnel, mouthClose, mouthPucker, mouthDimpleLeft, mouthDimpleRight, mouthStretchLeft, mouthStretchRight]
         
-        var phoneme = "oo"
-        var maxErr = maxError(baseline: baseline_vals[phoneme]!, actual: actual)
-        
-        //print(maxErr)
-        
-        if maxErr.0 < 80 {
-            print(correction_strings[maxErr.2][maxErr.1 > 0 ? 0 : 1])
-        } else {
-            print("Good!")
-        }
-    }
-    
-    func squareError(baseline: [Double], actual: [Double]) -> Double {
-        var leastSq = 0.0
-        
-        for i in 0..<baseline.count {
-            var err = baseline[i] - actual[i]
-            leastSq += err*err
-        }
-        
-        return leastSq
+        return maxError(baseline: baseline_vals[phoneme]!, actual: actual)
     }
     
     func maxError(baseline: [Double], actual: [Double]) -> (Double,Double,Int) {
-        var minScore = 100.0
+        var minScore = 1.0
         var err = 0.0
         var maxInd = 0
         
         for i in 0..<baseline.count {
             let c_max = baseline[i] - actual[i]
             let max_possible = (baseline[i] < 0.5) ? 1 - baseline[i] : baseline[i]
-            let score = 100*(1 - abs(c_max) / max_possible)
+            let score = 1 - abs(c_max) / max_possible
             
             if score < minScore {
                 minScore = score

@@ -31,9 +31,8 @@ class RetryViewController: UIViewController {
     }
     */
     @IBAction func retry(_ sender: Any) {
-        
+        // Look for the ViewController where FacialRecognition starts
         for vc in navigationController!.viewControllers {
-            // Look for the ViewController where FacialRecognition starts
             if vc.title == "FacialRecognition" {
                 self.navigationController?.popToViewController(vc, animated: true)
             }

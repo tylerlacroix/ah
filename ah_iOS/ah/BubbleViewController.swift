@@ -20,6 +20,13 @@ class BubbleViewController: UIViewController, UIViewControllerTransitioningDeleg
         let controller = segue.destination
         controller.transitioningDelegate = self
         controller.modalPresentationStyle = .custom
+        
+        guard let vowel = sender as? String else {
+            return
+        }
+        
+        let dest = segue.destination as! InstructionsViewController
+        dest.vowel = vowel
     }
     
     // MARK: UIViewControllerTransitioningDelegate
@@ -38,6 +45,11 @@ class BubbleViewController: UIViewController, UIViewControllerTransitioningDeleg
         transition.startingPoint = transitionButton.center
         transition.bubbleColor = transitionButton.backgroundColor!
         return transition
+    }
+    
+    @IBAction func transitionVowel(_ sender: UIButton) {
+        let vowel = sender.titleLabel?.text
+        performSegue(withIdentifier: "InstructionsSegue", sender: vowel)
     }
     
 }
