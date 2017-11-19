@@ -334,10 +334,10 @@
             </objects>
             <point key="canvasLocation" x="4742" y="-882"/>
         </scene>
-        <!--InstructionsVC View Controller-->
+        <!--Instructions View Controller-->
         <scene sceneID="wZ8-gX-e96">
             <objects>
-                <viewController id="2O9-FE-3Zy" customClass="InstructionsVCViewController" customModule="FaceTraking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2O9-FE-3Zy" customClass="InstructionsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FDL-kf-C5j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -573,8 +573,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pHN-lb-tJX"/>
         <segue reference="auG-XN-djD"/>
-        <segue reference="K2M-a1-PDt"/>
     </inferredMetricsTieBreakers>
 </document>

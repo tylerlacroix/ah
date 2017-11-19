@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1FAD82E6E6E36794C0FE2808 /* Pods_FaceTraking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70FE99A2562EA2202E309FB /* Pods_FaceTraking.framework */; };
 		3C7E39CBE6D317FB30B68CCD /* Pods_FaceTrakingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB89DE948E7A2AFF9055168 /* Pods_FaceTrakingTests.framework */; };
-		58A729D81FC109D3006500C8 /* InstructionsVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A729D71FC109D3006500C8 /* InstructionsVCViewController.swift */; };
+		58A729D81FC109D3006500C8 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A729D71FC109D3006500C8 /* InstructionsViewController.swift */; };
 		58FC8B6F1FC11D76009535E9 /* Ah.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 58FC8B6E1FC11D76009535E9 /* Ah.mp4 */; };
 		58FC8B711FC125F7009535E9 /* RetryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FC8B701FC125F7009535E9 /* RetryViewController.swift */; };
 		6ECCB8208A8A000A37CE7E2F /* Pods_FaceTrakingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8EA045F0C317844E4FD269 /* Pods_FaceTrakingUITests.framework */; };
@@ -50,7 +50,7 @@
 		4C8EA045F0C317844E4FD269 /* Pods_FaceTrakingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTrakingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A729D11FC1064D006500C8 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		58A729D21FC1064D006500C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		58A729D71FC109D3006500C8 /* InstructionsVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsVCViewController.swift; sourceTree = "<group>"; };
+		58A729D71FC109D3006500C8 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		58FC8B6E1FC11D76009535E9 /* Ah.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ah.mp4; sourceTree = "<group>"; };
 		58FC8B701FC125F7009535E9 /* RetryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryViewController.swift; sourceTree = "<group>"; };
 		5EB89DE948E7A2AFF9055168 /* Pods_FaceTrakingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTrakingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +153,7 @@
 				82102EFB1FBC2A4F00C6D1EA /* Assets.xcassets */,
 				82102EFD1FBC2A4F00C6D1EA /* LaunchScreen.storyboard */,
 				82102F001FBC2A4F00C6D1EA /* Info.plist */,
-				58A729D71FC109D3006500C8 /* InstructionsVCViewController.swift */,
+				58A729D71FC109D3006500C8 /* InstructionsViewController.swift */,
 				C4E947321FC13B6900C7B1BE /* OpenEarsHeader.h */,
 				58FC8B701FC125F7009535E9 /* RetryViewController.swift */,
 			);
@@ -486,7 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58A729D81FC109D3006500C8 /* InstructionsVCViewController.swift in Sources */,
+				58A729D81FC109D3006500C8 /* InstructionsViewController.swift in Sources */,
 				C4E947251FC12AFB00C7B1BE /* FaceScoreViewController.swift in Sources */,
 				58FC8B711FC125F7009535E9 /* RetryViewController.swift in Sources */,
 				82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */,
