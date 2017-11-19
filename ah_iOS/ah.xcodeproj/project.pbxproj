@@ -23,6 +23,8 @@
 		C4E9472F1FC13B4000C7B1BE /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C4E9472C1FC13B3F00C7B1BE /* AcousticModelEnglish.bundle */; };
 		C4E947301FC13B4000C7B1BE /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E9472D1FC13B4000C7B1BE /* OpenEars.framework */; };
 		C4E947311FC13B4000C7B1BE /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E9472E1FC13B4000C7B1BE /* Slt.framework */; };
+		C4E947341FC1601000C7B1BE /* BubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E947331FC1601000C7B1BE /* BubbleViewController.swift */; };
+		C4E947361FC1611700C7B1BE /* AH.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E947351FC1611700C7B1BE /* AH.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		C4E9472D1FC13B4000C7B1BE /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEars.framework; path = Framework/OpenEars.framework; sourceTree = "<group>"; };
 		C4E9472E1FC13B4000C7B1BE /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slt.framework; path = Framework/Slt.framework; sourceTree = "<group>"; };
 		C4E947321FC13B6900C7B1BE /* OpenEarsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenEarsHeader.h; sourceTree = "<group>"; };
+		C4E947331FC1601000C7B1BE /* BubbleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleViewController.swift; sourceTree = "<group>"; };
+		C4E947351FC1611700C7B1BE /* AH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AH.png; sourceTree = "<group>"; };
 		D598C6BD4A4CA27E00F63506 /* Pods-FaceTrakingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingUITests/Pods-FaceTrakingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E71834D6AF6A4A879093BD03 /* Pods-FaceTraking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTraking.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking.release.xcconfig"; sourceTree = "<group>"; };
 		F70FE99A2562EA2202E309FB /* Pods_FaceTraking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTraking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,10 +150,12 @@
 		82102EF31FBC2A4F00C6D1EA /* ah */ = {
 			isa = PBXGroup;
 			children = (
+				C4E947351FC1611700C7B1BE /* AH.png */,
 				58FC8B6E1FC11D76009535E9 /* Ah.mp4 */,
 				82102EF41FBC2A4F00C6D1EA /* AppDelegate.swift */,
 				C4E947241FC12AFB00C7B1BE /* FaceScoreViewController.swift */,
 				82102EF81FBC2A4F00C6D1EA /* Main.storyboard */,
+				C4E947331FC1601000C7B1BE /* BubbleViewController.swift */,
 				82102EFB1FBC2A4F00C6D1EA /* Assets.xcassets */,
 				82102EFD1FBC2A4F00C6D1EA /* LaunchScreen.storyboard */,
 				82102F001FBC2A4F00C6D1EA /* Info.plist */,
@@ -307,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E947361FC1611700C7B1BE /* AH.png in Resources */,
 				58FC8B6F1FC11D76009535E9 /* Ah.mp4 in Resources */,
 				82102EFF1FBC2A4F00C6D1EA /* LaunchScreen.storyboard in Resources */,
 				82102EFC1FBC2A4F00C6D1EA /* Assets.xcassets in Resources */,
@@ -489,6 +496,7 @@
 				58A729D81FC109D3006500C8 /* InstructionsVCViewController.swift in Sources */,
 				C4E947251FC12AFB00C7B1BE /* FaceScoreViewController.swift in Sources */,
 				58FC8B711FC125F7009535E9 /* RetryViewController.swift in Sources */,
+				C4E947341FC1601000C7B1BE /* BubbleViewController.swift in Sources */,
 				82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
