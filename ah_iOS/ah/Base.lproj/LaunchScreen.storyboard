@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,17 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ah!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Eu-a1-RGb">
-                                <rect key="frame" x="130" y="358.33333333333331" width="115" height="95.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="a9P-rW-Da6">
+                                <rect key="frame" x="97" y="310.66666666666669" width="180" height="190.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Gts-eW-QOe"/>
+                                    <constraint firstAttribute="width" secondItem="a9P-rW-Da6" secondAttribute="height" multiplier="33:35" id="qLZ-cr-oFI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5Eu-a1-RGb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="JaI-Yy-NnR"/>
-                            <constraint firstItem="5Eu-a1-RGb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="P9W-KD-x7j"/>
+                            <constraint firstItem="a9P-rW-Da6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cvA-hx-GdI"/>
+                            <constraint firstItem="a9P-rW-Da6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xHz-ZN-hHe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,4 +40,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="66" height="70"/>
+    </resources>
 </document>
