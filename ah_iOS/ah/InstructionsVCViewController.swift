@@ -20,7 +20,7 @@ class InstructionsVCViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let url = Bundle.main.url(forResource: "Ah", withExtension: "mov")!;
+        let url = Bundle.main.url(forResource: "Ah", withExtension: "mp4")!;
         let asset = AVAsset(url: url);
         let assetKeys = [
             "playable"
@@ -51,7 +51,7 @@ class InstructionsVCViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated);
         print(playerVC.videoBounds)
-//        playerVC.didMove(toParentViewController: self);
+//        let avPlayerLayer =
         
         //view.layer.addSublayer(playerVC.view.layer)
     }
@@ -70,7 +70,6 @@ class InstructionsVCViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if (segue.identifier == "videoSegue") {
             playerVC = segue.destination as! AVPlayerViewController;
-//            addChildViewController(playerVC);
         }
     }
 

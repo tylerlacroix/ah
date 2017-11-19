@@ -34,10 +34,11 @@
                         <viewLayoutGuide key="safeArea" id="enM-ru-6wm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Consonants" id="NxP-w1-CQE"/>
+                    <navigationItem key="navigationItem" id="h8T-69-SkI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLW-Yj-ffw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2853.5999999999999" y="414.53201970443354"/>
+            <point key="canvasLocation" x="3225" y="396"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QJi-ps-SfD">
@@ -188,6 +189,23 @@
             <point key="canvasLocation" x="6885.6000000000004" y="-326.60098522167488"/>
         </scene>
         <!--Vowels-->
+        <scene sceneID="5L9-Mu-QC9">
+            <objects>
+                <navigationController id="LBj-p3-25K" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Vowels" id="6ZJ-Oh-zdx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="No3-WK-hQX">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Gfo-UD-qrV" kind="relationship" relationship="rootViewController" id="Nd4-rb-TRR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ttx-Ap-zbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2474" y="-333"/>
+        </scene>
+        <!--Vowels-->
         <scene sceneID="c91-AF-akl">
             <objects>
                 <viewController id="Gfo-UD-qrV" sceneMemberID="viewController">
@@ -196,40 +214,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BhO-S9-U4u">
-                                <rect key="frame" x="172.66666666666666" y="75.333333333333314" width="30" height="653.66666666666674"/>
+                                <rect key="frame" x="172.66666666666666" y="119.33333333333331" width="30" height="609.66666666666674"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGJ-Rk-S3I">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="130.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="122"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="a"/>
                                         <connections>
-                                            <segue destination="2O9-FE-3Zy" kind="show" id="w8q-ol-iEN"/>
+                                            <segue destination="2O9-FE-3Zy" kind="show" id="ZfF-Db-xte"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdW-1k-zqc">
-                                        <rect key="frame" x="0.0" y="130.66666666666669" width="30" height="130.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="122" width="30" height="122"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="e"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mju-Zs-fK2">
-                                        <rect key="frame" x="0.0" y="261.33333333333337" width="30" height="131"/>
+                                        <rect key="frame" x="0.0" y="243.99999999999997" width="30" height="121.66666666666666"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="i"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le9-F3-j3x">
-                                        <rect key="frame" x="0.0" y="392.33333333333337" width="30" height="130.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="365.66666666666669" width="30" height="122"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="o"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R0-Yg-W5j">
-                                        <rect key="frame" x="0.0" y="523" width="30" height="130.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="487.66666666666674" width="30" height="122"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="u"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Vowels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-7R-XzO">
-                                <rect key="frame" x="113" y="44" width="149" height="31.333333333333329"/>
+                                <rect key="frame" x="113" y="88" width="149" height="31.333333333333329"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -246,13 +264,11 @@
                         <viewLayoutGuide key="safeArea" id="OQn-db-GfM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Vowels" id="HpW-AQ-LEX"/>
-                    <connections>
-                        <segue destination="2O9-FE-3Zy" kind="show" id="00r-lN-dwx"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="3BS-5t-UOt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCu-6m-baF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2853.5999999999999" y="-333.25123152709364"/>
+            <point key="canvasLocation" x="3226" y="-333"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="gmZ-qZ-wPV">
@@ -271,7 +287,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsH-u6-EYt">
-                                <rect key="frame" x="0.0" y="698" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="649" width="375" height="80"/>
                                 <color key="backgroundColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="TEx-1C-FJX"/>
@@ -285,13 +301,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMd-LZ-vP2">
-                                <rect key="frame" x="122.00000000000001" y="44" width="131.33333333333337" height="31.333333333333329"/>
+                                <rect key="frame" x="122.00000000000001" y="88" width="131.33333333333337" height="31.333333333333329"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-Tt-5b4">
-                                <rect key="frame" x="0.0" y="100" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="BaQ-aD-Utw"/>
                                 </constraints>
@@ -373,15 +389,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Gfo-UD-qrV" kind="relationship" relationship="viewControllers" id="Keo-Fq-6wa"/>
-                        <segue destination="TWk-sl-8Kb" kind="relationship" relationship="viewControllers" id="gl3-2M-b91"/>
-                        <segue destination="16L-a9-trR" kind="relationship" relationship="viewControllers" id="N72-S3-dfT"/>
-                        <segue destination="rki-JW-T2u" kind="relationship" relationship="viewControllers" id="Kso-0N-9HZ"/>
+                        <segue destination="LBj-p3-25K" kind="relationship" relationship="viewControllers" id="KhY-7f-DsE"/>
+                        <segue destination="buS-gf-SXa" kind="relationship" relationship="viewControllers" id="FJQ-XD-Vv3"/>
+                        <segue destination="LxB-F1-ZK6" kind="relationship" relationship="viewControllers" id="AJ0-e6-x8T"/>
+                        <segue destination="NWi-Uh-kEz" kind="relationship" relationship="viewControllers" id="orh-zJ-tp2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cop-hW-kgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1655" y="78"/>
+        </scene>
+        <!--Consonants-->
+        <scene sceneID="kgw-UI-BAn">
+            <objects>
+                <navigationController id="buS-gf-SXa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Consonants" id="0He-7u-320"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ao1-L6-gDU">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TWk-sl-8Kb" kind="relationship" relationship="rootViewController" id="niI-PI-YVU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4N-kf-l9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="395"/>
         </scene>
         <!--Words-->
         <scene sceneID="eca-Hu-0NK">
@@ -406,10 +439,45 @@
                         <viewLayoutGuide key="safeArea" id="f7X-i2-MWI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Words" id="Zco-tc-rYX"/>
+                    <navigationItem key="navigationItem" id="7EV-cr-VfV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRg-a2-alw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="1229"/>
+            <point key="canvasLocation" x="753" y="1130"/>
+        </scene>
+        <!--Words-->
+        <scene sceneID="RRU-ks-GpD">
+            <objects>
+                <navigationController id="NWi-Uh-kEz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Words" id="63h-qn-8D7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ndU-Rl-T4R">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rki-JW-T2u" kind="relationship" relationship="rootViewController" id="z0w-rj-7rQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nmy-3w-Kuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1506" y="1130"/>
+        </scene>
+        <!--Phonemes-->
+        <scene sceneID="Wpc-WF-XxI">
+            <objects>
+                <navigationController id="LxB-F1-ZK6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Phonemes" id="Ol7-TS-9mz"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Eq-S4-lR4">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="16L-a9-trR" kind="relationship" relationship="rootViewController" id="HVq-bb-nva"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="997-zR-2Nk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="1130"/>
         </scene>
         <!--Phonemes-->
         <scene sceneID="2LY-6t-0sq">
@@ -434,16 +502,16 @@
                         <viewLayoutGuide key="safeArea" id="COU-Sx-0MA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Phonemes" id="uOQ-rZ-iZk"/>
+                    <navigationItem key="navigationItem" id="Wfm-Ef-Dz0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uIM-1Z-dAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2854" y="1229"/>
+            <point key="canvasLocation" x="3225" y="1130"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="m1U-zq-wjE"/>
-        <segue reference="00r-lN-dwx"/>
+        <segue reference="pHN-lb-tJX"/>
         <segue reference="auG-XN-djD"/>
-        <segue reference="K2M-a1-PDt"/>
+        <segue reference="WkA-Hy-wxG"/>
     </inferredMetricsTieBreakers>
 </document>
