@@ -10,9 +10,8 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class InstructionsVCViewController: UIViewController {
+class InstructionsViewController: UIViewController {
 
-    @IBOutlet weak var playerEmbed: UIView!
     var playerVC: AVPlayerViewController!
     
     

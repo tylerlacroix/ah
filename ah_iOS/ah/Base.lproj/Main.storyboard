@@ -397,7 +397,6 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="playerEmbed" destination="ybw-Tt-5b4" id="VQ0-5J-S6N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNU-pf-pe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
