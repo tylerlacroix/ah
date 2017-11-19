@@ -63,16 +63,12 @@
                             <constraint firstItem="0fn-36-cG0" firstAttribute="centerY" secondItem="nfE-G2-LM1" secondAttribute="centerY" id="UZH-Rv-Hcz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9k3-D9-F47"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="ocV-da-QWh" appends="YES" id="l1T-6q-kkA"/>
-                        </connections>
                     </view>
                     <connections>
                         <segue destination="lg5-XV-M9H" kind="show" id="auG-XN-djD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKM-9G-wtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="ocV-da-QWh"/>
             </objects>
             <point key="canvasLocation" x="4860" y="-333"/>
         </scene>
@@ -221,7 +217,7 @@
         <!--Vowels-->
         <scene sceneID="c91-AF-akl">
             <objects>
-                <viewController id="Gfo-UD-qrV" sceneMemberID="viewController">
+                <viewController id="Gfo-UD-qrV" customClass="VowelsViewController" customModule="FaceTraking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9d0-H3-1aO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,7 +242,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="2O9-FE-3Zy" kind="show" id="ZfF-Db-xte"/>
+                                            <action selector="transitionVowel:" destination="Gfo-UD-qrV" eventType="touchUpInside" id="j86-GL-OhA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdW-1k-zqc">
@@ -261,6 +257,9 @@
                                                 <integer key="value" value="45"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="transitionVowel:" destination="Gfo-UD-qrV" eventType="touchUpInside" id="Br7-cb-FEq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mju-Zs-fK2">
                                         <rect key="frame" x="0.0" y="220" width="90" height="90"/>
@@ -274,6 +273,9 @@
                                                 <integer key="value" value="45"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="transitionVowel:" destination="Gfo-UD-qrV" eventType="touchUpInside" id="AD7-lr-lkU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le9-F3-j3x">
                                         <rect key="frame" x="0.0" y="330" width="90" height="90"/>
@@ -287,6 +289,9 @@
                                                 <integer key="value" value="45"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="transitionVowel:" destination="Gfo-UD-qrV" eventType="touchUpInside" id="HYZ-MU-2OG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R0-Yg-W5j">
                                         <rect key="frame" x="0.0" y="440" width="90" height="90"/>
@@ -300,6 +305,9 @@
                                                 <integer key="value" value="45"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="transitionVowel:" destination="Gfo-UD-qrV" eventType="touchUpInside" id="3LX-lZ-quq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -321,6 +329,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Vowels" id="HpW-AQ-LEX"/>
                     <navigationItem key="navigationItem" id="3BS-5t-UOt"/>
+                    <connections>
+                        <segue destination="2O9-FE-3Zy" kind="show" identifier="InstructionsSegue" id="frN-kD-hJc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCu-6m-baF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -337,7 +348,8 @@
         <!--Instructions View Controller-->
         <scene sceneID="wZ8-gX-e96">
             <objects>
-                <viewController id="2O9-FE-3Zy" customClass="InstructionsViewController" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNU-pf-pe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="2O9-FE-3Zy" customClass="InstructionsViewController" customModule="FaceTraking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FDL-kf-C5j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -392,15 +404,8 @@
                             <constraint firstItem="dsH-u6-EYt" firstAttribute="leading" secondItem="UEM-Cz-jFH" secondAttribute="leading" id="yq9-Sj-NxH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UEM-Cz-jFH"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="clG-86-8Cp" appends="YES" id="RBk-OP-X7K"/>
-                        </connections>
                     </view>
-                    <connections>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hNU-pf-pe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="clG-86-8Cp"/>
             </objects>
             <point key="canvasLocation" x="3941.5999999999999" y="-333.25123152709364"/>
         </scene>

@@ -13,6 +13,7 @@ import AVFoundation
 class InstructionsViewController: UIViewController {
 
     var playerVC: AVPlayerViewController!
+    internal var vowel: String!
     
     
     override func viewDidLoad() {
@@ -20,8 +21,27 @@ class InstructionsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        // vowel
+        var fileName: String!
+        switch vowel {
+        case "a":
+            fileName = "Ah"
+        case "e":
+            fileName = "Eh"
+        case "i":
+            fileName = "Ee(i)"
+        case "o":
+            fileName = "Oh"
+        case "u":
+            fileName = "oo(u)"
+        default:
+            break   // Fuck it.
+        }
+        
         // Get the video file URL
-        let url = Bundle.main.url(forResource: "Ah", withExtension: "mp4")!
+        let url = Bundle.main.url(forResource: fileName, withExtension: "mp4")!
+        
+        print(url)
 
         // Swap out the playing item, or create a new player
         if let play = playerVC.player {
@@ -47,6 +67,4 @@ class InstructionsViewController: UIViewController {
             playerVC = segue.destination as! AVPlayerViewController;
         }
     }
-
-    
 }
