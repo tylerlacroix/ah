@@ -20,36 +20,54 @@ class InstructionsViewController: ModalViewController {
     let tips = [
         "ay":"""
         •    Open your mouth as wide as possible vertically and horizontally
+        
         •    Apply impact on the pit of your stomach
+        
         •    Let the air out
+        
         •    Feel the vibration on your throat
         """,
         "eh": """
         •    Open your mouth as wide as possible horizontally, as if you are smiling with your mouth slightly open
+        
         •    Apply a small impact on the pit of your stomach
+        
         •    Let the air out
+        
         •    Feel the vibration on your throat
 
         """,
         "ee": """
         •    Open your mouth as wide as possible horizontally.
+        
         •    Close your teeth
+        
         •    Apply a small impact on the pit of your stomach
+        
         •    Let the air out
+        
         •    Feel the vibration on your throat
         """,
         "oh": """
         •    Open your mouth as wide as possible vertically.
+        
         •    Make an “O” shape with your mouth
+        
         •    Apply a small impact on the pit of your stomach
+        
         •    Let the air out
+        
         •    Feel the vibration on your throat
         """,
         "oo": """
         •    Close your teeth
+        
         •    Stick your lips out, as you are kissing
+        
         •    Apply a small impact on the pit of your stomach
+        
         •    Let the air out
+        
         •    Feel the vibration on your throat
         """
     ]
