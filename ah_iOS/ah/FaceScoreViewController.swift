@@ -7,7 +7,7 @@
 import UIKit
 import ARKit
 
-class FaceScoreViewController: UIViewController, OEEventsObserverDelegate, ARSCNViewDelegate, ARSessionDelegate {
+class FaceScoreViewController: ModalViewController, OEEventsObserverDelegate, ARSCNViewDelegate, ARSessionDelegate {
     public var phoneme = "oo"
     
     var slt = Slt()
