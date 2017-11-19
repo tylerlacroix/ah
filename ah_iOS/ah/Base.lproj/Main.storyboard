@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="3225" y="396"/>
         </scene>
-        <!--View Controller-->
+        <!--FacialRecognition-->
         <scene sceneID="QJi-ps-SfD">
             <objects>
-                <viewController id="esR-hO-G9B" sceneMemberID="viewController">
+                <viewController title="FacialRecognition" id="esR-hO-G9B" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfE-G2-LM1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +109,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="NeF-Mq-dX4" kind="show" id="BSD-Ok-Bt5"/>
+                                    <segue destination="NeF-Mq-dX4" kind="show" id="zoz-EE-3JP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score Board, and facial correction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keR-iq-gFc">
@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="5925.6000000000004" y="-327.33990147783254"/>
         </scene>
-        <!--View Controller-->
+        <!--Retry View Controller-->
         <scene sceneID="euJ-9R-wlG">
             <objects>
-                <viewController id="NeF-Mq-dX4" sceneMemberID="viewController">
+                <viewController id="NeF-Mq-dX4" customClass="RetryViewController" customModule="FaceTraking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wVF-gZ-rrt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +172,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Retry"/>
                                         <connections>
-                                            <segue destination="esR-hO-G9B" kind="show" id="WkA-Hy-wxG"/>
+                                            <action selector="retry:" destination="NeF-Mq-dX4" eventType="touchUpInside" id="NHN-V9-dmh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etl-GU-rtO">
@@ -180,7 +180,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Main Menu"/>
                                         <connections>
-                                            <segue destination="Nwg-jN-PZM" kind="show" id="m1U-zq-wjE"/>
+                                            <action selector="mainMenu:" destination="NeF-Mq-dX4" eventType="touchUpInside" id="06K-XF-y9e"/>
                                         </connections>
                                     </button>
                                 </subviews>

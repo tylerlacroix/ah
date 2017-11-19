@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58A729D61FC10853006500C8 /* Ah.mov in Resources */ = {isa = PBXBuildFile; fileRef = 58A729D51FC10852006500C8 /* Ah.mov */; };
+		1FAD82E6E6E36794C0FE2808 /* Pods_FaceTraking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70FE99A2562EA2202E309FB /* Pods_FaceTraking.framework */; };
+		3C7E39CBE6D317FB30B68CCD /* Pods_FaceTrakingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB89DE948E7A2AFF9055168 /* Pods_FaceTrakingTests.framework */; };
 		58A729D81FC109D3006500C8 /* InstructionsVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A729D71FC109D3006500C8 /* InstructionsVCViewController.swift */; };
 		58FC8B6F1FC11D76009535E9 /* Ah.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 58FC8B6E1FC11D76009535E9 /* Ah.mp4 */; };
+		58FC8B711FC125F7009535E9 /* RetryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FC8B701FC125F7009535E9 /* RetryViewController.swift */; };
+		6ECCB8208A8A000A37CE7E2F /* Pods_FaceTrakingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8EA045F0C317844E4FD269 /* Pods_FaceTrakingUITests.framework */; };
 		82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82102EF41FBC2A4F00C6D1EA /* AppDelegate.swift */; };
 		82102EFA1FBC2A4F00C6D1EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82102EF81FBC2A4F00C6D1EA /* Main.storyboard */; };
 		82102EFC1FBC2A4F00C6D1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82102EFB1FBC2A4F00C6D1EA /* Assets.xcassets */; };
@@ -40,11 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CE1CEF81CE2B05A15617FED /* Pods-FaceTrakingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingTests/Pods-FaceTrakingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0DF10EA12C1A31740ACEA5F9 /* Pods-FaceTraking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTraking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking.debug.xcconfig"; sourceTree = "<group>"; };
+		2521C30CC7242AEDC10B74BB /* Pods-FaceTrakingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingUITests/Pods-FaceTrakingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4090DBF174CD5FEF5852E471 /* Pods-FaceTrakingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingTests/Pods-FaceTrakingTests.release.xcconfig"; sourceTree = "<group>"; };
+		4C8EA045F0C317844E4FD269 /* Pods_FaceTrakingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTrakingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A729D11FC1064D006500C8 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		58A729D21FC1064D006500C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		58A729D51FC10852006500C8 /* Ah.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Ah.mov; sourceTree = "<group>"; };
 		58A729D71FC109D3006500C8 /* InstructionsVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsVCViewController.swift; sourceTree = "<group>"; };
 		58FC8B6E1FC11D76009535E9 /* Ah.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ah.mp4; sourceTree = "<group>"; };
+		58FC8B701FC125F7009535E9 /* RetryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryViewController.swift; sourceTree = "<group>"; };
+		5EB89DE948E7A2AFF9055168 /* Pods_FaceTrakingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTrakingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82102EF11FBC2A4F00C6D1EA /* FaceTraking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceTraking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82102EF41FBC2A4F00C6D1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82102EF91FBC2A4F00C6D1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +71,9 @@
 		C4E9472D1FC13B4000C7B1BE /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEars.framework; path = Framework/OpenEars.framework; sourceTree = "<group>"; };
 		C4E9472E1FC13B4000C7B1BE /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slt.framework; path = Framework/Slt.framework; sourceTree = "<group>"; };
 		C4E947321FC13B6900C7B1BE /* OpenEarsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenEarsHeader.h; sourceTree = "<group>"; };
+		D598C6BD4A4CA27E00F63506 /* Pods-FaceTrakingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingUITests/Pods-FaceTrakingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E71834D6AF6A4A879093BD03 /* Pods-FaceTraking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTraking.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking.release.xcconfig"; sourceTree = "<group>"; };
+		F70FE99A2562EA2202E309FB /* Pods_FaceTraking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTraking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,7 @@
 			files = (
 				C4E947311FC13B4000C7B1BE /* Slt.framework in Frameworks */,
 				C4E947301FC13B4000C7B1BE /* OpenEars.framework in Frameworks */,
+				1FAD82E6E6E36794C0FE2808 /* Pods_FaceTraking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7E39CBE6D317FB30B68CCD /* Pods_FaceTrakingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ECCB8208A8A000A37CE7E2F /* Pods_FaceTrakingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +114,9 @@
 				C4E9472E1FC13B4000C7B1BE /* Slt.framework */,
 				58A729D21FC1064D006500C8 /* AVFoundation.framework */,
 				58A729D11FC1064D006500C8 /* AVKit.framework */,
+				F70FE99A2562EA2202E309FB /* Pods_FaceTraking.framework */,
+				5EB89DE948E7A2AFF9055168 /* Pods_FaceTrakingTests.framework */,
+				4C8EA045F0C317844E4FD269 /* Pods_FaceTrakingUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,6 +129,7 @@
 				82102F131FBC2A4F00C6D1EA /* FaceTraking_DepthImageUITests */,
 				82102EF21FBC2A4F00C6D1EA /* Products */,
 				58A729D01FC1064C006500C8 /* Frameworks */,
+				C8913CF6949858901121EB01 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				58FC8B6E1FC11D76009535E9 /* Ah.mp4 */,
-				58A729D51FC10852006500C8 /* Ah.mov */,
 				82102EF41FBC2A4F00C6D1EA /* AppDelegate.swift */,
 				C4E947241FC12AFB00C7B1BE /* FaceScoreViewController.swift */,
 				82102EF81FBC2A4F00C6D1EA /* Main.storyboard */,
@@ -137,6 +155,7 @@
 				82102F001FBC2A4F00C6D1EA /* Info.plist */,
 				58A729D71FC109D3006500C8 /* InstructionsVCViewController.swift */,
 				C4E947321FC13B6900C7B1BE /* OpenEarsHeader.h */,
+				58FC8B701FC125F7009535E9 /* RetryViewController.swift */,
 			);
 			path = ah;
 			sourceTree = "<group>";
@@ -159,6 +178,19 @@
 			path = FaceTraking_DepthImageUITests;
 			sourceTree = "<group>";
 		};
+		C8913CF6949858901121EB01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DF10EA12C1A31740ACEA5F9 /* Pods-FaceTraking.debug.xcconfig */,
+				E71834D6AF6A4A879093BD03 /* Pods-FaceTraking.release.xcconfig */,
+				0CE1CEF81CE2B05A15617FED /* Pods-FaceTrakingTests.debug.xcconfig */,
+				4090DBF174CD5FEF5852E471 /* Pods-FaceTrakingTests.release.xcconfig */,
+				D598C6BD4A4CA27E00F63506 /* Pods-FaceTrakingUITests.debug.xcconfig */,
+				2521C30CC7242AEDC10B74BB /* Pods-FaceTrakingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82102F191FBC2A4F00C6D1EA /* Build configuration list for PBXNativeTarget "FaceTraking" */;
 			buildPhases = (
+				9DF7D7965876CED67773A9D7 /* [CP] Check Pods Manifest.lock */,
 				82102EED1FBC2A4F00C6D1EA /* Sources */,
 				82102EEE1FBC2A4F00C6D1EA /* Frameworks */,
 				82102EEF1FBC2A4F00C6D1EA /* Resources */,
+				C3C960A433058AA057D489A3 /* [CP] Embed Pods Frameworks */,
+				715BD50DABC62728C4A49C67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82102F1C1FBC2A4F00C6D1EA /* Build configuration list for PBXNativeTarget "FaceTrakingTests" */;
 			buildPhases = (
+				CC0F5095A0A96843D8BB3F41 /* [CP] Check Pods Manifest.lock */,
 				82102F011FBC2A4F00C6D1EA /* Sources */,
 				82102F021FBC2A4F00C6D1EA /* Frameworks */,
 				82102F031FBC2A4F00C6D1EA /* Resources */,
+				8F96ABACD1039908E86FE1FA /* [CP] Embed Pods Frameworks */,
+				EC51EF8615FD8476ACBD8FA0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82102F1F1FBC2A4F00C6D1EA /* Build configuration list for PBXNativeTarget "FaceTrakingUITests" */;
 			buildPhases = (
+				95DB770F9CE0F484CAEB6EAA /* [CP] Check Pods Manifest.lock */,
 				82102F0C1FBC2A4F00C6D1EA /* Sources */,
 				82102F0D1FBC2A4F00C6D1EA /* Frameworks */,
 				82102F0E1FBC2A4F00C6D1EA /* Resources */,
+				6F0C944E902990DADFDAC549 /* [CP] Embed Pods Frameworks */,
+				99605C6041C82BB443ED4D7E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,7 +312,6 @@
 				82102EFC1FBC2A4F00C6D1EA /* Assets.xcassets in Resources */,
 				C4E9472F1FC13B4000C7B1BE /* AcousticModelEnglish.bundle in Resources */,
 				82102EFA1FBC2A4F00C6D1EA /* Main.storyboard in Resources */,
-				58A729D61FC10853006500C8 /* Ah.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +331,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F0C944E902990DADFDAC549 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceTrakingUITests/Pods-FaceTrakingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		715BD50DABC62728C4A49C67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F96ABACD1039908E86FE1FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceTrakingTests/Pods-FaceTrakingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95DB770F9CE0F484CAEB6EAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceTrakingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99605C6041C82BB443ED4D7E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceTrakingUITests/Pods-FaceTrakingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DF7D7965876CED67773A9D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceTraking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3C960A433058AA057D489A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC0F5095A0A96843D8BB3F41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceTrakingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC51EF8615FD8476ACBD8FA0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceTrakingTests/Pods-FaceTrakingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		82102EED1FBC2A4F00C6D1EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -298,6 +488,7 @@
 			files = (
 				58A729D81FC109D3006500C8 /* InstructionsVCViewController.swift in Sources */,
 				C4E947251FC12AFB00C7B1BE /* FaceScoreViewController.swift in Sources */,
+				58FC8B711FC125F7009535E9 /* RetryViewController.swift in Sources */,
 				82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +653,7 @@
 		};
 		82102F1A1FBC2A4F00C6D1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DF10EA12C1A31740ACEA5F9 /* Pods-FaceTraking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -482,6 +674,7 @@
 		};
 		82102F1B1FBC2A4F00C6D1EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E71834D6AF6A4A879093BD03 /* Pods-FaceTraking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,6 +695,7 @@
 		};
 		82102F1D1FBC2A4F00C6D1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CE1CEF81CE2B05A15617FED /* Pods-FaceTrakingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +713,7 @@
 		};
 		82102F1E1FBC2A4F00C6D1EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4090DBF174CD5FEF5852E471 /* Pods-FaceTrakingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +731,7 @@
 		};
 		82102F201FBC2A4F00C6D1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D598C6BD4A4CA27E00F63506 /* Pods-FaceTrakingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +748,7 @@
 		};
 		82102F211FBC2A4F00C6D1EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2521C30CC7242AEDC10B74BB /* Pods-FaceTrakingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
