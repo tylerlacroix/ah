@@ -140,7 +140,7 @@ class FaceScoreViewController: ModalViewController, OEEventsObserverDelegate, AR
     
     func pocketsphinxDidReceiveHypothesis(_ hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
         print(recognitionScore)
-        let score = 1/(1+pow(M_E, (-0.0002*Double(recognitionScore)!-4.4985)))
+        let score = 1/(1+pow(M_E, (-0.00007*Double(recognitionScore)!-4.516)))
         detectedAudio = true
         
         if (score > pronounciationScore) {
@@ -419,7 +419,7 @@ class FaceScoreViewController: ModalViewController, OEEventsObserverDelegate, AR
 // MARK: - UIImagePickerController
 let baseline_vals = ["ay": [0.29882529377937317, 0.18682879209518433, 0.095764830708503723, 0.064638502895832062, 0.043682102113962173, 0.03534390777349472, 0.30295950174331665, 0.28203269839286804],
                      "ee": [0.1122453408,0.1046263104,0.01547330727,0.04486234835,0.2405471156,0.2153886408,0.3041163385,0.3020832638],
-                     "oo": [0.1502567939,0.2337069611,0.1084855422,0.4298841109,0.01796273235,0.01092089247,0.1611879418,0.1509508441]]
+                     "oo": [0.1502567939,0.2337069611,0.1084855422,0.850610912,0.01796273235,0.01092089247,0.1611879418,0.1509508441]]
 
 extension FaceScoreViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func calcScore() -> (Double,Double,Int) {
@@ -438,10 +438,7 @@ extension FaceScoreViewController: UINavigationControllerDelegate, UIImagePicker
         
         let actual = [jawOpen, mouthFunnel, mouthClose, mouthPucker, mouthDimpleLeft, mouthDimpleRight, mouthStretchLeft, mouthStretchRight]
         
-        print("\nNEW\n")
-        for i in actual {
-            print(i)
-        }
+        print(actual)
         
         return maxError(baseline: baseline_vals[phoneme]!, actual: actual)
     }

@@ -8,6 +8,10 @@ target 'FaceTraking' do
   # Pods for FaceTraking
   pod 'BubbleTransition', '~> 2.0.0'
 
+  pod 'SquishButton'
+
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+
   target 'FaceTrakingTests' do
     inherit! :search_paths
     # Pods for testing

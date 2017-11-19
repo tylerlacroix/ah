@@ -30,6 +30,11 @@
 		C4E947381FC180EF00C7B1BE /* BubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E947371FC180EE00C7B1BE /* BubbleViewController.swift */; };
 		C4E9473A1FC18D4400C7B1BE /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E947391FC18D4300C7B1BE /* ModalViewController.swift */; };
 		C4E9473C1FC191B900C7B1BE /* BubbleViewControllerBW.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E9473B1FC191B900C7B1BE /* BubbleViewControllerBW.swift */; };
+		C4E9473E1FC1B95C00C7B1BE /* WhiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E9473D1FC1B95C00C7B1BE /* WhiteViewController.swift */; };
+		C4E947421FC1BDB200C7B1BE /* vow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E947411FC1BDB200C7B1BE /* vow@2x.png */; };
+		C4E947441FC1BF0000C7B1BE /* con.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E947431FC1BEFF00C7B1BE /* con.png */; };
+		C4E947461FC1C03500C7B1BE /* hello.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E947451FC1C03500C7B1BE /* hello.png */; };
+		C4E947481FC1C03C00C7B1BE /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E947471FC1C03B00C7B1BE /* a.png */; };
 		C5E257CA1FC14DC4003F7522 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E257C91FC14DC4003F7522 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +91,11 @@
 		C4E947371FC180EE00C7B1BE /* BubbleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleViewController.swift; sourceTree = "<group>"; };
 		C4E947391FC18D4300C7B1BE /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		C4E9473B1FC191B900C7B1BE /* BubbleViewControllerBW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleViewControllerBW.swift; sourceTree = "<group>"; };
+		C4E9473D1FC1B95C00C7B1BE /* WhiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteViewController.swift; sourceTree = "<group>"; };
+		C4E947411FC1BDB200C7B1BE /* vow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vow@2x.png"; sourceTree = "<group>"; };
+		C4E947431FC1BEFF00C7B1BE /* con.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = con.png; sourceTree = "<group>"; };
+		C4E947451FC1C03500C7B1BE /* hello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hello.png; sourceTree = "<group>"; };
+		C4E947471FC1C03B00C7B1BE /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
 		C5E257C91FC14DC4003F7522 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		D598C6BD4A4CA27E00F63506 /* Pods-FaceTrakingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingUITests/Pods-FaceTrakingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E71834D6AF6A4A879093BD03 /* Pods-FaceTraking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTraking.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +173,10 @@
 		82102EF31FBC2A4F00C6D1EA /* ah */ = {
 			isa = PBXGroup;
 			children = (
+				C4E947411FC1BDB200C7B1BE /* vow@2x.png */,
+				C4E947471FC1C03B00C7B1BE /* a.png */,
+				C4E947451FC1C03500C7B1BE /* hello.png */,
+				C4E947431FC1BEFF00C7B1BE /* con.png */,
 				C4E9473B1FC191B900C7B1BE /* BubbleViewControllerBW.swift */,
 				C4E947371FC180EE00C7B1BE /* BubbleViewController.swift */,
 				58C433921FC1753600E0F5D5 /* Ee(i).mp4 */,
@@ -180,6 +194,7 @@
 				58A729D71FC109D3006500C8 /* InstructionsViewController.swift */,
 				C4E947321FC13B6900C7B1BE /* OpenEarsHeader.h */,
 				58C4338E1FC16CF000E0F5D5 /* VowelsViewController.swift */,
+				C4E9473D1FC1B95C00C7B1BE /* WhiteViewController.swift */,
 			);
 			path = ah;
 			sourceTree = "<group>";
@@ -333,13 +348,17 @@
 			files = (
 				58FC8B6F1FC11D76009535E9 /* Ah.mp4 in Resources */,
 				58C433951FC1753600E0F5D5 /* Eh.mp4 in Resources */,
+				C4E947441FC1BF0000C7B1BE /* con.png in Resources */,
 				82102EFF1FBC2A4F00C6D1EA /* LaunchScreen.storyboard in Resources */,
+				C4E947461FC1C03500C7B1BE /* hello.png in Resources */,
 				82102EFC1FBC2A4F00C6D1EA /* Assets.xcassets in Resources */,
 				58C433961FC1753600E0F5D5 /* Ee(i).mp4 in Resources */,
 				C4E9472F1FC13B4000C7B1BE /* AcousticModelEnglish.bundle in Resources */,
 				58C433941FC1753600E0F5D5 /* oo(u).mp4 in Resources */,
 				82102EFA1FBC2A4F00C6D1EA /* Main.storyboard in Resources */,
+				C4E947421FC1BDB200C7B1BE /* vow@2x.png in Resources */,
 				58C433971FC1753600E0F5D5 /* Oh.mp4 in Resources */,
+				C4E947481FC1C03C00C7B1BE /* a.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,10 +483,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/SquishButton/SquishButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SquishButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -521,6 +544,7 @@
 				C4E947251FC12AFB00C7B1BE /* FaceScoreViewController.swift in Sources */,
 				C4E947381FC180EF00C7B1BE /* BubbleViewController.swift in Sources */,
 				82102EF51FBC2A4F00C6D1EA /* AppDelegate.swift in Sources */,
+				C4E9473E1FC1B95C00C7B1BE /* WhiteViewController.swift in Sources */,
 				C4E9473A1FC18D4400C7B1BE /* ModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

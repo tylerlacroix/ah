@@ -7,86 +7,172 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		048B6AD6154DCD9425D0628D4BB332D2 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FBA6A6825FF84D37D34288EF083FA3 /* BubbleTransition.swift */; };
-		15B92BD6A32F0D58A1079138ED72C4F1 /* BubbleTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B5AC8146A476E741370EEB5B8C662 /* BubbleTransition-dummy.m */; };
+		00FAF0FE154334F7A8FC3AA3CDD33F64 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2383C527859DAE73CDC22B2E6E9107C0 /* SpringImageView.swift */; };
+		048B6AD6154DCD9425D0628D4BB332D2 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCC649F4111216E5B66AA73B9E9032 /* BubbleTransition.swift */; };
+		06BA79EE994CAA8FB49E9F7C1B0346C9 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFE5415E8C0A9127DB284265CE5C0A /* DesignableTabBarController.swift */; };
+		0EBC12DA299F1D3A86E766B0E6511B85 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB580297020EAF68E41AE8871993A7C5 /* TransitionManager.swift */; };
+		11A78D4C24280B79B7E4D81B19ECA6D8 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762A91BFC724DCA171A31AD3C2565966 /* SpringView.swift */; };
+		15B92BD6A32F0D58A1079138ED72C4F1 /* BubbleTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 591EB153F5B1A76F37125B0B7DCE3190 /* BubbleTransition-dummy.m */; };
+		1CCD736E5C8DF0F6E8ECFA3117DCE872 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A13A3A2C1D2D6EEB2A2EE196DB566B /* Images.xcassets */; };
+		1F6763FADF87DC628B435FD2148C47B6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2FF1A6F73029BE97CD60A36DF3FCC /* SpringAnimation.swift */; };
+		20D930BC76ECC459473005862592F575 /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDFB102D466ED239B2BDE5E1EF147 /* SpringTextView.swift */; };
+		24793197BAC0A881D1C6A5140346A8A5 /* Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3F7EBAA5AB7C05B63635474798374E5 /* Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		297269C4AB9EE0E7DA4CD5E86AD28D65 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC8A1F9922550F809BD4012DA6D4A4 /* DesignableButton.swift */; };
+		2B420C7EAB5D0A77D1D607F39E84E0E6 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E57BF055034CC2BFB188DA3DFC77E /* DesignableView.swift */; };
+		2DC3F65C5030AC2024B300DC5F8B3020 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD6545882BE5CC63428F89E4F3E96F /* Misc.swift */; };
 		2E661DEBE52AC97DD34645C51498AFFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		3F159A8B3F6F29DAC1F4DD3BFC4892BA /* BubbleTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36D3188C04332F9B763891F4674A25CD /* BubbleTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F3BF8EC352E0464EF742801BBB998B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		58F614724C4D65F7A67CF96AD413341D /* Pods-FaceTraking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B7814A20FD2E1F7C05C130978ED253 /* Pods-FaceTraking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		373D6AEE6396716B09385FE3AF88C0DD /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC892F91CB068B072826E9DAD338412 /* TransitionZoom.swift */; };
+		3890AF4B2A9C85948ED114832BA28CD4 /* SquishButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5541BDF696C26E1B69C86AA8BDDC934 /* SquishButton-dummy.m */; };
+		3F159A8B3F6F29DAC1F4DD3BFC4892BA /* BubbleTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09365E8DA9975F15EC6765A47B5B6EA2 /* BubbleTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41C3FDE86846054C3C0ED401EAC2CC41 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3784736C6B68536B0A405D65607593E9 /* DesignableImageView.swift */; };
+		44E4B140BBDBC03F0671845BE320D7FC /* Pods-FaceTraking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D1FB831123A1FD98359FCCC103F407 /* Pods-FaceTraking-dummy.m */; };
+		5B0D3926820F28517E0560EAF9A49980 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BC2778243F49D11437D1985D6F86F /* LoadingView.swift */; };
+		5B1F72D12B107A71828D91F9D57AF3C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		671DB24620B50DA8A216595B2A05D83A /* Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EE9FA304A5E8866A59E82747718735 /* Spring-dummy.m */; };
+		709A0F1DD36E0D810E33608034A45497 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160287D535B99F72F15E7E3D386C115B /* SpringButton.swift */; };
+		7902F1169C5AE0933F14CA49ABE341E7 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB01CC85D9559A481677BCAC582D04E8 /* ImageLoader.swift */; };
+		81138C0E039792B4570E6673DC2EE3AB /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2935B78743855AEA1AB77F2B7D7E4 /* SpringLabel.swift */; };
+		8563780A42ADB9C5B115C3D76853704F /* Pods-FaceTraking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B7814A20FD2E1F7C05C130978ED253 /* Pods-FaceTraking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88B185015F9E74C7D78FB962983B93FB /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AC17EA51BE48033924BBC056A76974 /* KeyboardLayoutConstraint.swift */; };
 		8C6CD115E0E833CB003BCEBA60FB1621 /* Pods-FaceTrakingUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0595FAAF79107B28F1B9C092127B2A48 /* Pods-FaceTrakingUITests-dummy.m */; };
+		8DBF0425C9C66FBF7CF4601BA816D07E /* SquishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC62FAF4109A06751270FEA970691F4 /* SquishButton.swift */; };
+		8E1E9D7A0115753A1F66D7787A8BD3BA /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC05DD0A050F16795CB7418CD8AA0FD2 /* SoundPlayer.swift */; };
+		8EDDE704699CAA0F5EE67625DF785A01 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51772558AAA240FF392E05D3C08C526F /* DesignableTextField.swift */; };
+		8FA097847F2E0B7CFE235AD121DED34B /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C0BC583F29217A4B771BFBC61684F /* DesignableTextView.swift */; };
 		A0F067954709CB84E64AF2F82F6C016E /* Pods-FaceTrakingTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5577D6545E0A76893DEA07F93A7DB7 /* Pods-FaceTrakingTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8BF9F41BF89F35F1F7EC6CBC8E6C2F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A8EB7CE507E4F6EF8B02E8A82B20E19A /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FCFADF0701F41FACF8C63D8F6AA8D /* Spring.swift */; };
+		ABBF85049A219D45F9246934DFE6C289 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FA01A761EEC3CE2C1DCE83D811A665 /* UnwindSegue.swift */; };
+		B62BBE3107B394E4F5F8A5819F2982BB /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97E3CE4BD4EAEE0A67CFAA9765F9ACC /* LoadingView.xib */; };
+		B66A98BD81F2A37F50352C394FE063ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B80D06DEFAB63238C4A1AFB4E891CAF0 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8976E2E88890FA8005652DE3E2B05A9 /* BlurView.swift */; };
+		B8CABA69DDC2DC9877D6898A9F1050A9 /* SquishButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FA899A337CFCD15AC5924C5F9B4CB90 /* SquishButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCF3BDF829736CE914FAD7D830860EC1 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07461F71AE64B7575BE122C0AB21F0A1 /* AutoTextView.swift */; };
 		BF24BB0B0402EF9DD9DCABC6B1B2E378 /* Pods-FaceTrakingTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709E0B5FC0F46F999A760365D0B320 /* Pods-FaceTrakingTests-dummy.m */; };
 		C5741611AFC3EDCFEE09F2CB007C6BD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C99F49ACCF221A7F129FC86B90047B60 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD2CBEE99BC6B68F98BC7B2BDEC750 /* SpringTextField.swift */; };
+		CA0DF6C2FB5B7FB0B1731BFA876E1F82 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A3D03241E66AFC8A1745761062DAF3 /* AsyncButton.swift */; };
+		DA323E3778573DF1092270DA34AE5E50 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0154D1C24735F5BFCEBE6AA335D45 /* DesignableLabel.swift */; };
 		DB14C5C653F3149E9EF0996B616481BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		DE1197A89BAF000050714A7FAC2EC0AE /* Pods-FaceTrakingUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C282333756BD0B21C24798BF7F803F50 /* Pods-FaceTrakingUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF6189232373950F7CC12CDF2744AA7F /* Pods-FaceTraking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D1FB831123A1FD98359FCCC103F407 /* Pods-FaceTraking-dummy.m */; };
+		F1286CC2B0D06E095061D63E6D45AFEE /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E5ADA0434A0E6F7A22F971C1904586 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BFFA7B9D2ACABE28E362D62786F296B6 /* PBXContainerItemProxy */ = {
+		089F5286E12D6C7EFF8513665C9D9A40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBB62A52BDC5DCD1D11A10047266A0B6;
+			remoteInfo = SquishButton;
+		};
+		924B079BA4CCE2256B397EECD7D3D790 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 38830187D9E171E7B43047ED06A08ADC;
 			remoteInfo = BubbleTransition;
 		};
+		B9616C286D4FB55AA718C56423DCD079 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C53312992467CBEC5BFEEE7171F1EB50;
+			remoteInfo = Spring;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		054CA85593E11591D34BA41D413967B7 /* Pods-FaceTraking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FaceTraking.modulemap"; sourceTree = "<group>"; };
 		0595FAAF79107B28F1B9C092127B2A48 /* Pods-FaceTrakingUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FaceTrakingUITests-dummy.m"; sourceTree = "<group>"; };
+		07461F71AE64B7575BE122C0AB21F0A1 /* AutoTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoTextView.swift; path = Spring/AutoTextView.swift; sourceTree = "<group>"; };
+		09365E8DA9975F15EC6765A47B5B6EA2 /* BubbleTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BubbleTransition-umbrella.h"; sourceTree = "<group>"; };
 		0A3A4F502ACBF096CA1B79782FCE38CF /* Pods-FaceTrakingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FaceTrakingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0CB4F9C71C06A90AC2809A1CD80B9F8C /* Pods-FaceTraking-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FaceTraking-resources.sh"; sourceTree = "<group>"; };
-		11FBA6A6825FF84D37D34288EF083FA3 /* BubbleTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleTransition.swift; path = Source/BubbleTransition.swift; sourceTree = "<group>"; };
+		11FC8A1F9922550F809BD4012DA6D4A4 /* DesignableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableButton.swift; path = Spring/DesignableButton.swift; sourceTree = "<group>"; };
+		160287D535B99F72F15E7E3D386C115B /* SpringButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringButton.swift; path = Spring/SpringButton.swift; sourceTree = "<group>"; };
+		2383C527859DAE73CDC22B2E6E9107C0 /* SpringImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringImageView.swift; path = Spring/SpringImageView.swift; sourceTree = "<group>"; };
+		24C8B4763D5512605B5D8B50DF3150D5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24EE9FA304A5E8866A59E82747718735 /* Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spring-dummy.m"; sourceTree = "<group>"; };
+		25BA417D5688BDD884E08BFD24E541A5 /* SquishButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SquishButton.modulemap; sourceTree = "<group>"; };
 		29A48C395C5F982D4A896CBB2F8F8681 /* Pods-FaceTraking-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FaceTraking-acknowledgements.plist"; sourceTree = "<group>"; };
-		36D3188C04332F9B763891F4674A25CD /* BubbleTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BubbleTransition-umbrella.h"; sourceTree = "<group>"; };
+		35E5ADA0434A0E6F7A22F971C1904586 /* AsyncImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Spring/AsyncImageView.swift; sourceTree = "<group>"; };
+		3784736C6B68536B0A405D65607593E9 /* DesignableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableImageView.swift; path = Spring/DesignableImageView.swift; sourceTree = "<group>"; };
 		3C44B7D83DBC55A34504096952127AB6 /* Pods-FaceTrakingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FaceTrakingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3DFDDCE3277E04A544AA7FA916A6BB0D /* SquishButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SquishButton-prefix.pch"; sourceTree = "<group>"; };
 		3F49BCF34F00B281A6A72CF7963AC53D /* Pods-FaceTraking-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FaceTraking-frameworks.sh"; sourceTree = "<group>"; };
-		461B5AC8146A476E741370EEB5B8C662 /* BubbleTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BubbleTransition-dummy.m"; sourceTree = "<group>"; };
-		4640C3F983028B370E0E2F09281E5B3E /* BubbleTransition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BubbleTransition.modulemap; sourceTree = "<group>"; };
-		497491BAF5A9B77C3B95879764640523 /* BubbleTransition.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BubbleTransition.xcconfig; sourceTree = "<group>"; };
 		4BF70F428F4A26B5B70809D92AEC8A97 /* Pods-FaceTrakingUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FaceTrakingUITests-resources.sh"; sourceTree = "<group>"; };
+		4EC2935B78743855AEA1AB77F2B7D7E4 /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
+		4FA899A337CFCD15AC5924C5F9B4CB90 /* SquishButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SquishButton-umbrella.h"; sourceTree = "<group>"; };
+		51772558AAA240FF392E05D3C08C526F /* DesignableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = Spring/DesignableTextField.swift; sourceTree = "<group>"; };
+		51A3D03241E66AFC8A1745761062DAF3 /* AsyncButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncButton.swift; path = Spring/AsyncButton.swift; sourceTree = "<group>"; };
 		56A423F5304793C559C2B6D7465468F9 /* Pods-FaceTrakingUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FaceTrakingUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5F36A05BA27248CDDA2032559EA63801 /* BubbleTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BubbleTransition-prefix.pch"; sourceTree = "<group>"; };
+		591EB153F5B1A76F37125B0B7DCE3190 /* BubbleTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BubbleTransition-dummy.m"; sourceTree = "<group>"; };
+		5B6DE0F2A3D109F88559EC1371FC1328 /* BubbleTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BubbleTransition.framework; path = BubbleTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C5E4ED928DF2E987633C34CA5A9C4E6 /* Pods_FaceTrakingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FaceTrakingUITests.framework; path = "Pods-FaceTrakingUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F39173CDDFACABF9CE0FC91DD27388F /* Pods-FaceTrakingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FaceTrakingTests.release.xcconfig"; sourceTree = "<group>"; };
 		604E146B526D5AF0CCCCC43B2D4C56F6 /* Pods-FaceTraking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FaceTraking.debug.xcconfig"; sourceTree = "<group>"; };
+		605E57BF055034CC2BFB188DA3DFC77E /* DesignableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Spring/DesignableView.swift; sourceTree = "<group>"; };
+		63BD6545882BE5CC63428F89E4F3E96F /* Misc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Misc.swift; path = Spring/Misc.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		66D1FB831123A1FD98359FCCC103F407 /* Pods-FaceTraking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FaceTraking-dummy.m"; sourceTree = "<group>"; };
+		68BA5CD588A90E6AEEB799C23DC5A1C2 /* Pods_FaceTrakingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FaceTrakingTests.framework; path = "Pods-FaceTrakingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE864F5F0900296149E0F91C1BE1256 /* Pods-FaceTraking-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FaceTraking-acknowledgements.markdown"; sourceTree = "<group>"; };
 		757DDCB512989D01B103D9D315965814 /* Pods-FaceTrakingTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FaceTrakingTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		762A91BFC724DCA171A31AD3C2565966 /* SpringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringView.swift; path = Spring/SpringView.swift; sourceTree = "<group>"; };
+		78225EBB004039F526C44D867B9CE172 /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Spring.framework; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AB184ED803E3EBFF659CE317AC5DA8C /* Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spring.xcconfig; sourceTree = "<group>"; };
+		7C6BC2778243F49D11437D1985D6F86F /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Spring/LoadingView.swift; sourceTree = "<group>"; };
 		7DA5F71635CFD01D948317AAF33DC933 /* Pods-FaceTrakingTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FaceTrakingTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		820F619A1D9041E711AFED86B3725C16 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DB0154D1C24735F5BFCEBE6AA335D45 /* DesignableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = Spring/DesignableLabel.swift; sourceTree = "<group>"; };
 		84B7814A20FD2E1F7C05C130978ED253 /* Pods-FaceTraking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FaceTraking-umbrella.h"; sourceTree = "<group>"; };
-		901FA5F299E32CAEB7E2442765979818 /* Pods_FaceTraking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FaceTraking.framework; path = "Pods-FaceTraking.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91AC17EA51BE48033924BBC056A76974 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		92CFE5415E8C0A9127DB284265CE5C0A /* DesignableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTabBarController.swift; path = Spring/DesignableTabBarController.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94A13A3A2C1D2D6EEB2A2EE196DB566B /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
+		95CCC649F4111216E5B66AA73B9E9032 /* BubbleTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleTransition.swift; path = Source/BubbleTransition.swift; sourceTree = "<group>"; };
 		978B9CA5834AC574B60CE3342FA81442 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99DA6F374C3BDB393689218FA3944DCA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0283096448241B704367C1C2E0BD8AA /* BubbleTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BubbleTransition.framework; path = BubbleTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2A91432883C2A9E5830DE82901E634 /* Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Spring.modulemap; sourceTree = "<group>"; };
+		A18F80F655DD3C797E5399CA7393CD3A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A29C0BC583F29217A4B771BFBC61684F /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
+		A2C2FF1A6F73029BE97CD60A36DF3FCC /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Spring/SpringAnimation.swift; sourceTree = "<group>"; };
 		A65CCC4F773A8785EAAC1D3F417306B4 /* Pods-FaceTrakingTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FaceTrakingTests-resources.sh"; sourceTree = "<group>"; };
+		A8976E2E88890FA8005652DE3E2B05A9 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Spring/BlurView.swift; sourceTree = "<group>"; };
+		AB01CC85D9559A481677BCAC582D04E8 /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Spring/ImageLoader.swift; sourceTree = "<group>"; };
+		ADC62FAF4109A06751270FEA970691F4 /* SquishButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SquishButton.swift; path = SquishButton/Classes/SquishButton.swift; sourceTree = "<group>"; };
+		AF898E5EEC8C1D14BDDCB22AB4ED0EC5 /* Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-prefix.pch"; sourceTree = "<group>"; };
+		AFF9A41525C244C29A58837BC7FA8CE8 /* BubbleTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BubbleTransition-prefix.pch"; sourceTree = "<group>"; };
 		B357F70DD5AA0253383E47723F4413CC /* Pods-FaceTrakingUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FaceTrakingUITests.modulemap"; sourceTree = "<group>"; };
-		BE1BBC2934534D09CF3FC38FE95585A1 /* Pods_FaceTrakingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FaceTrakingTests.framework; path = "Pods-FaceTrakingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF28C07744454425EED5C1F2DAFA5106 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C05BC0CDDF1AFAEA5667DBF1C6D23B64 /* SquishButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SquishButton.framework; path = SquishButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C20DDFB102D466ED239B2BDE5E1EF147 /* SpringTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextView.swift; path = Spring/SpringTextView.swift; sourceTree = "<group>"; };
 		C282333756BD0B21C24798BF7F803F50 /* Pods-FaceTrakingUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FaceTrakingUITests-umbrella.h"; sourceTree = "<group>"; };
+		C3F7EBAA5AB7C05B63635474798374E5 /* Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-umbrella.h"; sourceTree = "<group>"; };
 		C75B62B178C9F635F1E354A8D386F13F /* Pods-FaceTrakingUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FaceTrakingUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C97E3CE4BD4EAEE0A67CFAA9765F9ACC /* LoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LoadingView.xib; path = Spring/LoadingView.xib; sourceTree = "<group>"; };
+		CAC892F91CB068B072826E9DAD338412 /* TransitionZoom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionZoom.swift; path = Spring/TransitionZoom.swift; sourceTree = "<group>"; };
+		CB580297020EAF68E41AE8871993A7C5 /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
+		CC05DD0A050F16795CB7418CD8AA0FD2 /* SoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Spring/SoundPlayer.swift; sourceTree = "<group>"; };
+		D5541BDF696C26E1B69C86AA8BDDC934 /* SquishButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SquishButton-dummy.m"; sourceTree = "<group>"; };
 		D5709E0B5FC0F46F999A760365D0B320 /* Pods-FaceTrakingTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FaceTrakingTests-dummy.m"; sourceTree = "<group>"; };
+		DC1544ACC46CBAC9D10F8B5EE998A879 /* Pods_FaceTraking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FaceTraking.framework; path = "Pods-FaceTraking.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4F8DABF2436B5E176619C488227564 /* Pods-FaceTraking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FaceTraking.release.xcconfig"; sourceTree = "<group>"; };
+		DF4FCFADF0701F41FACF8C63D8F6AA8D /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
 		DF9457FA4AAB080CFC7B6E70C51436F6 /* Pods-FaceTrakingTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FaceTrakingTests-frameworks.sh"; sourceTree = "<group>"; };
+		E7FA01A761EEC3CE2C1DCE83D811A665 /* UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnwindSegue.swift; path = Spring/UnwindSegue.swift; sourceTree = "<group>"; };
+		EA0FE49831966835C9DB1E7A3A527C43 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5577D6545E0A76893DEA07F93A7DB7 /* Pods-FaceTrakingTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FaceTrakingTests-umbrella.h"; sourceTree = "<group>"; };
-		F07F6D9DE99A9C8ACEA2873257E34595 /* Pods_FaceTrakingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FaceTrakingUITests.framework; path = "Pods-FaceTrakingUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED48999AB2DDF56B05D4FF7843C8206 /* SquishButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SquishButton.xcconfig; sourceTree = "<group>"; };
+		F04F001527B62A322CC2C9049379F6E6 /* BubbleTransition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BubbleTransition.modulemap; sourceTree = "<group>"; };
+		F0BD2CBEE99BC6B68F98BC7B2BDEC750 /* SpringTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextField.swift; path = Spring/SpringTextField.swift; sourceTree = "<group>"; };
 		F157BC23F7E004FC488F57EF73A10D1A /* Pods-FaceTrakingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FaceTrakingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F28C8F7D0FF6B29D287DCA62B84C649E /* BubbleTransition.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BubbleTransition.xcconfig; sourceTree = "<group>"; };
 		F52E9819599FF3F8229CABD97FCBC28A /* Pods-FaceTrakingTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FaceTrakingTests.modulemap"; sourceTree = "<group>"; };
 		FAEDECE8F5792E376696B18140655C59 /* Pods-FaceTrakingUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FaceTrakingUITests-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1FF48FB732FABB904C2287FD5B81D4A8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F3BF8EC352E0464EF742801BBB998B6 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		40921521F511C72EA238B5C6D295071B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,11 +181,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		48911769EC9C007942991145C364D3A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1F72D12B107A71828D91F9D57AF3C4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABCF7F00CE0EED008C0B986A622A0DDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66A98BD81F2A37F50352C394FE063ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D756DA14932342915B06B5A24C295CE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2E661DEBE52AC97DD34645C51498AFFF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5A792C640AFF0BA43E949AD953E61B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8BF9F41BF89F35F1F7EC6CBC8E6C2F0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +224,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		155C75CDAA9F34F48F361E574D6A91A7 /* SquishButton */ = {
+			isa = PBXGroup;
+			children = (
+				ADC62FAF4109A06751270FEA970691F4 /* SquishButton.swift */,
+				3EED5140F9A36D9D3A18B41D837A82BF /* Support Files */,
+			);
+			name = SquishButton;
+			path = SquishButton;
+			sourceTree = "<group>";
+		};
+		16D5F3CC38FC3A31EB4EC242A2008781 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				24C8B4763D5512605B5D8B50DF3150D5 /* Info.plist */,
+				9D2A91432883C2A9E5830DE82901E634 /* Spring.modulemap */,
+				7AB184ED803E3EBFF659CE317AC5DA8C /* Spring.xcconfig */,
+				24EE9FA304A5E8866A59E82747718735 /* Spring-dummy.m */,
+				AF898E5EEC8C1D14BDDCB22AB4ED0EC5 /* Spring-prefix.pch */,
+				C3F7EBAA5AB7C05B63635474798374E5 /* Spring-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Spring";
+			sourceTree = "<group>";
+		};
 		1B14675AB42F2F9583A68104DE24A942 /* Pods-FaceTraking */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,14 +266,18 @@
 			path = "Target Support Files/Pods-FaceTraking";
 			sourceTree = "<group>";
 		};
-		24BC10960AC3D30601B218E8B4069511 /* BubbleTransition */ = {
+		3EED5140F9A36D9D3A18B41D837A82BF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				11FBA6A6825FF84D37D34288EF083FA3 /* BubbleTransition.swift */,
-				F75F236D384500594CC03F55C5F0D300 /* Support Files */,
+				EA0FE49831966835C9DB1E7A3A527C43 /* Info.plist */,
+				25BA417D5688BDD884E08BFD24E541A5 /* SquishButton.modulemap */,
+				EED48999AB2DDF56B05D4FF7843C8206 /* SquishButton.xcconfig */,
+				D5541BDF696C26E1B69C86AA8BDDC934 /* SquishButton-dummy.m */,
+				3DFDDCE3277E04A544AA7FA916A6BB0D /* SquishButton-prefix.pch */,
+				4FA899A337CFCD15AC5924C5F9B4CB90 /* SquishButton-umbrella.h */,
 			);
-			name = BubbleTransition;
-			path = BubbleTransition;
+			name = "Support Files";
+			path = "../Target Support Files/SquishButton";
 			sourceTree = "<group>";
 		};
 		4092A3869A214B1488EE7EE693034DA7 /* Pods-FaceTrakingTests */ = {
@@ -160,13 +298,40 @@
 			path = "Target Support Files/Pods-FaceTrakingTests";
 			sourceTree = "<group>";
 		};
+		55D7929D08F950B0B513EF7799374989 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F04F001527B62A322CC2C9049379F6E6 /* BubbleTransition.modulemap */,
+				F28C8F7D0FF6B29D287DCA62B84C649E /* BubbleTransition.xcconfig */,
+				591EB153F5B1A76F37125B0B7DCE3190 /* BubbleTransition-dummy.m */,
+				AFF9A41525C244C29A58837BC7FA8CE8 /* BubbleTransition-prefix.pch */,
+				09365E8DA9975F15EC6765A47B5B6EA2 /* BubbleTransition-umbrella.h */,
+				A18F80F655DD3C797E5399CA7393CD3A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BubbleTransition";
+			sourceTree = "<group>";
+		};
+		77AE09D4E80A4FDAC9499E71A95F640C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B6DE0F2A3D109F88559EC1371FC1328 /* BubbleTransition.framework */,
+				DC1544ACC46CBAC9D10F8B5EE998A879 /* Pods_FaceTraking.framework */,
+				68BA5CD588A90E6AEEB799C23DC5A1C2 /* Pods_FaceTrakingTests.framework */,
+				5C5E4ED928DF2E987633C34CA5A9C4E6 /* Pods_FaceTrakingUITests.framework */,
+				78225EBB004039F526C44D867B9CE172 /* Spring.framework */,
+				C05BC0CDDF1AFAEA5667DBF1C6D23B64 /* SquishButton.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				B8C17D57F982D97B0CFF768B9B68279E /* Pods */,
-				B43285AAFEC1F421017BFDC1F5D4F358 /* Products */,
+				A89758D870CC5297CE52D51087F57C61 /* Pods */,
+				77AE09D4E80A4FDAC9499E71A95F640C /* Products */,
 				91EE332DA5158E38B59FCF0C3028FC50 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -179,6 +344,43 @@
 				A02BFD4BB600260612BD83E54BD8547D /* Pods-FaceTrakingUITests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		941E6663CFE8E2FE58421BC9F6F827D5 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				51A3D03241E66AFC8A1745761062DAF3 /* AsyncButton.swift */,
+				35E5ADA0434A0E6F7A22F971C1904586 /* AsyncImageView.swift */,
+				07461F71AE64B7575BE122C0AB21F0A1 /* AutoTextView.swift */,
+				A8976E2E88890FA8005652DE3E2B05A9 /* BlurView.swift */,
+				11FC8A1F9922550F809BD4012DA6D4A4 /* DesignableButton.swift */,
+				3784736C6B68536B0A405D65607593E9 /* DesignableImageView.swift */,
+				7DB0154D1C24735F5BFCEBE6AA335D45 /* DesignableLabel.swift */,
+				92CFE5415E8C0A9127DB284265CE5C0A /* DesignableTabBarController.swift */,
+				51772558AAA240FF392E05D3C08C526F /* DesignableTextField.swift */,
+				A29C0BC583F29217A4B771BFBC61684F /* DesignableTextView.swift */,
+				605E57BF055034CC2BFB188DA3DFC77E /* DesignableView.swift */,
+				AB01CC85D9559A481677BCAC582D04E8 /* ImageLoader.swift */,
+				91AC17EA51BE48033924BBC056A76974 /* KeyboardLayoutConstraint.swift */,
+				7C6BC2778243F49D11437D1985D6F86F /* LoadingView.swift */,
+				63BD6545882BE5CC63428F89E4F3E96F /* Misc.swift */,
+				CC05DD0A050F16795CB7418CD8AA0FD2 /* SoundPlayer.swift */,
+				DF4FCFADF0701F41FACF8C63D8F6AA8D /* Spring.swift */,
+				A2C2FF1A6F73029BE97CD60A36DF3FCC /* SpringAnimation.swift */,
+				160287D535B99F72F15E7E3D386C115B /* SpringButton.swift */,
+				2383C527859DAE73CDC22B2E6E9107C0 /* SpringImageView.swift */,
+				4EC2935B78743855AEA1AB77F2B7D7E4 /* SpringLabel.swift */,
+				F0BD2CBEE99BC6B68F98BC7B2BDEC750 /* SpringTextField.swift */,
+				C20DDFB102D466ED239B2BDE5E1EF147 /* SpringTextView.swift */,
+				762A91BFC724DCA171A31AD3C2565966 /* SpringView.swift */,
+				CB580297020EAF68E41AE8871993A7C5 /* TransitionManager.swift */,
+				CAC892F91CB068B072826E9DAD338412 /* TransitionZoom.swift */,
+				E7FA01A761EEC3CE2C1DCE83D811A665 /* UnwindSegue.swift */,
+				F781DC9C0B0FAD3C8CF31EEE7D09B646 /* Resources */,
+				16D5F3CC38FC3A31EB4EC242A2008781 /* Support Files */,
+			);
+			name = Spring;
+			path = Spring;
 			sourceTree = "<group>";
 		};
 		A02BFD4BB600260612BD83E54BD8547D /* Pods-FaceTrakingUITests */ = {
@@ -199,21 +401,12 @@
 			path = "Target Support Files/Pods-FaceTrakingUITests";
 			sourceTree = "<group>";
 		};
-		B43285AAFEC1F421017BFDC1F5D4F358 /* Products */ = {
+		A89758D870CC5297CE52D51087F57C61 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A0283096448241B704367C1C2E0BD8AA /* BubbleTransition.framework */,
-				901FA5F299E32CAEB7E2442765979818 /* Pods_FaceTraking.framework */,
-				BE1BBC2934534D09CF3FC38FE95585A1 /* Pods_FaceTrakingTests.framework */,
-				F07F6D9DE99A9C8ACEA2873257E34595 /* Pods_FaceTrakingUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B8C17D57F982D97B0CFF768B9B68279E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				24BC10960AC3D30601B218E8B4069511 /* BubbleTransition */,
+				F86B34025786BAF3ABA6092B500A16CF /* BubbleTransition */,
+				941E6663CFE8E2FE58421BC9F6F827D5 /* Spring */,
+				155C75CDAA9F34F48F361E574D6A91A7 /* SquishButton */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -234,18 +427,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F75F236D384500594CC03F55C5F0D300 /* Support Files */ = {
+		F781DC9C0B0FAD3C8CF31EEE7D09B646 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4640C3F983028B370E0E2F09281E5B3E /* BubbleTransition.modulemap */,
-				497491BAF5A9B77C3B95879764640523 /* BubbleTransition.xcconfig */,
-				461B5AC8146A476E741370EEB5B8C662 /* BubbleTransition-dummy.m */,
-				5F36A05BA27248CDDA2032559EA63801 /* BubbleTransition-prefix.pch */,
-				36D3188C04332F9B763891F4674A25CD /* BubbleTransition-umbrella.h */,
-				820F619A1D9041E711AFED86B3725C16 /* Info.plist */,
+				94A13A3A2C1D2D6EEB2A2EE196DB566B /* Images.xcassets */,
+				C97E3CE4BD4EAEE0A67CFAA9765F9ACC /* LoadingView.xib */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/BubbleTransition";
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F86B34025786BAF3ABA6092B500A16CF /* BubbleTransition */ = {
+			isa = PBXGroup;
+			children = (
+				95CCC649F4111216E5B66AA73B9E9032 /* BubbleTransition.swift */,
+				55D7929D08F950B0B513EF7799374989 /* Support Files */,
+			);
+			name = BubbleTransition;
+			path = BubbleTransition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,19 +457,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07DF794D370E8D7DC6FC2A125103DECF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24793197BAC0A881D1C6A5140346A8A5 /* Spring-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4078E6E4A95C769EA93CD14CFE897D88 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8563780A42ADB9C5B115C3D76853704F /* Pods-FaceTraking-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		926571D373704F9E79522226034B6270 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8CABA69DDC2DC9877D6898A9F1050A9 /* SquishButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A171D7B6F9BCB0243576CCCF3BC62CB0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DE1197A89BAF000050714A7FAC2EC0AE /* Pods-FaceTrakingUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7BF56D29915A9EF67C2800D48917AC2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				58F614724C4D65F7A67CF96AD413341D /* Pods-FaceTraking-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +514,7 @@
 			);
 			name = "Pods-FaceTrakingTests";
 			productName = "Pods-FaceTrakingTests";
-			productReference = BE1BBC2934534D09CF3FC38FE95585A1 /* Pods_FaceTrakingTests.framework */;
+			productReference = 68BA5CD588A90E6AEEB799C23DC5A1C2 /* Pods_FaceTrakingTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		38830187D9E171E7B43047ED06A08ADC /* BubbleTransition */ = {
@@ -317,25 +531,24 @@
 			);
 			name = BubbleTransition;
 			productName = BubbleTransition;
-			productReference = A0283096448241B704367C1C2E0BD8AA /* BubbleTransition.framework */;
+			productReference = 5B6DE0F2A3D109F88559EC1371FC1328 /* BubbleTransition.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4311B18C911F9DD6D2D2688365E5A8B3 /* Pods-FaceTraking */ = {
+		BBB62A52BDC5DCD1D11A10047266A0B6 /* SquishButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B69D16327319FE079C053ED152EEAA /* Build configuration list for PBXNativeTarget "Pods-FaceTraking" */;
+			buildConfigurationList = 6F3B74203329AFD24CDCE812FC30DAFB /* Build configuration list for PBXNativeTarget "SquishButton" */;
 			buildPhases = (
-				61763E3954E043FD3D396F461440C159 /* Sources */,
-				1FF48FB732FABB904C2287FD5B81D4A8 /* Frameworks */,
-				A7BF56D29915A9EF67C2800D48917AC2 /* Headers */,
+				D5F12CBAA62BE20EF2ECF19DD3C28D0A /* Sources */,
+				48911769EC9C007942991145C364D3A3 /* Frameworks */,
+				926571D373704F9E79522226034B6270 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7CF29F7735EEE52F29113F90739114C7 /* PBXTargetDependency */,
 			);
-			name = "Pods-FaceTraking";
-			productName = "Pods-FaceTraking";
-			productReference = 901FA5F299E32CAEB7E2442765979818 /* Pods_FaceTraking.framework */;
+			name = SquishButton;
+			productName = SquishButton;
+			productReference = C05BC0CDDF1AFAEA5667DBF1C6D23B64 /* SquishButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BCE650DEBE4F639FE613D57C46AF523B /* Pods-FaceTrakingUITests */ = {
@@ -352,7 +565,45 @@
 			);
 			name = "Pods-FaceTrakingUITests";
 			productName = "Pods-FaceTrakingUITests";
-			productReference = F07F6D9DE99A9C8ACEA2873257E34595 /* Pods_FaceTrakingUITests.framework */;
+			productReference = 5C5E4ED928DF2E987633C34CA5A9C4E6 /* Pods_FaceTrakingUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C53312992467CBEC5BFEEE7171F1EB50 /* Spring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 055A1CF5A1C7EDDACA26F2A7756799F4 /* Build configuration list for PBXNativeTarget "Spring" */;
+			buildPhases = (
+				ACB0CC9C6843934200F4D23AECB9999F /* Sources */,
+				ABCF7F00CE0EED008C0B986A622A0DDE /* Frameworks */,
+				4FD78A156AF1ADA866A939799C9D26D7 /* Resources */,
+				07DF794D370E8D7DC6FC2A125103DECF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spring;
+			productName = Spring;
+			productReference = 78225EBB004039F526C44D867B9CE172 /* Spring.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DCF9F21AFA25E7E07E316776E9ACF605 /* Pods-FaceTraking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA36FCB79F7377E26DB88A983ABE83F /* Build configuration list for PBXNativeTarget "Pods-FaceTraking" */;
+			buildPhases = (
+				302F9CD1AC914F9C0BBED9723B0E5E41 /* Sources */,
+				E5A792C640AFF0BA43E949AD953E61B5 /* Frameworks */,
+				4078E6E4A95C769EA93CD14CFE897D88 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9BDB3A51BD7A0350BC761B368FC15BE /* PBXTargetDependency */,
+				0D048ADB3C26C4DB2323DC34E2110383 /* PBXTargetDependency */,
+				33506A5B5AB8BBEF6450545653F524B9 /* PBXTargetDependency */,
+			);
+			name = "Pods-FaceTraking";
+			productName = "Pods-FaceTraking";
+			productReference = DC1544ACC46CBAC9D10F8B5EE998A879 /* Pods_FaceTraking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -372,19 +623,41 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B43285AAFEC1F421017BFDC1F5D4F358 /* Products */;
+			productRefGroup = 77AE09D4E80A4FDAC9499E71A95F640C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				38830187D9E171E7B43047ED06A08ADC /* BubbleTransition */,
-				4311B18C911F9DD6D2D2688365E5A8B3 /* Pods-FaceTraking */,
+				DCF9F21AFA25E7E07E316776E9ACF605 /* Pods-FaceTraking */,
 				377940AD85185330552E835EBF26E061 /* Pods-FaceTrakingTests */,
 				BCE650DEBE4F639FE613D57C46AF523B /* Pods-FaceTrakingUITests */,
+				C53312992467CBEC5BFEEE7171F1EB50 /* Spring */,
+				BBB62A52BDC5DCD1D11A10047266A0B6 /* SquishButton */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		4FD78A156AF1ADA866A939799C9D26D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CCD736E5C8DF0F6E8ECFA3117DCE872 /* Images.xcassets in Resources */,
+				B62BBE3107B394E4F5F8A5819F2982BB /* LoadingView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		302F9CD1AC914F9C0BBED9723B0E5E41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44E4B140BBDBC03F0671845BE320D7FC /* Pods-FaceTraking-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		438E32F5A37C72A972564F8A578CC2B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,11 +666,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61763E3954E043FD3D396F461440C159 /* Sources */ = {
+		ACB0CC9C6843934200F4D23AECB9999F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF6189232373950F7CC12CDF2744AA7F /* Pods-FaceTraking-dummy.m in Sources */,
+				CA0DF6C2FB5B7FB0B1731BFA876E1F82 /* AsyncButton.swift in Sources */,
+				F1286CC2B0D06E095061D63E6D45AFEE /* AsyncImageView.swift in Sources */,
+				BCF3BDF829736CE914FAD7D830860EC1 /* AutoTextView.swift in Sources */,
+				B80D06DEFAB63238C4A1AFB4E891CAF0 /* BlurView.swift in Sources */,
+				297269C4AB9EE0E7DA4CD5E86AD28D65 /* DesignableButton.swift in Sources */,
+				41C3FDE86846054C3C0ED401EAC2CC41 /* DesignableImageView.swift in Sources */,
+				DA323E3778573DF1092270DA34AE5E50 /* DesignableLabel.swift in Sources */,
+				06BA79EE994CAA8FB49E9F7C1B0346C9 /* DesignableTabBarController.swift in Sources */,
+				8EDDE704699CAA0F5EE67625DF785A01 /* DesignableTextField.swift in Sources */,
+				8FA097847F2E0B7CFE235AD121DED34B /* DesignableTextView.swift in Sources */,
+				2B420C7EAB5D0A77D1D607F39E84E0E6 /* DesignableView.swift in Sources */,
+				7902F1169C5AE0933F14CA49ABE341E7 /* ImageLoader.swift in Sources */,
+				88B185015F9E74C7D78FB962983B93FB /* KeyboardLayoutConstraint.swift in Sources */,
+				5B0D3926820F28517E0560EAF9A49980 /* LoadingView.swift in Sources */,
+				2DC3F65C5030AC2024B300DC5F8B3020 /* Misc.swift in Sources */,
+				8E1E9D7A0115753A1F66D7787A8BD3BA /* SoundPlayer.swift in Sources */,
+				671DB24620B50DA8A216595B2A05D83A /* Spring-dummy.m in Sources */,
+				A8EB7CE507E4F6EF8B02E8A82B20E19A /* Spring.swift in Sources */,
+				1F6763FADF87DC628B435FD2148C47B6 /* SpringAnimation.swift in Sources */,
+				709A0F1DD36E0D810E33608034A45497 /* SpringButton.swift in Sources */,
+				00FAF0FE154334F7A8FC3AA3CDD33F64 /* SpringImageView.swift in Sources */,
+				81138C0E039792B4570E6673DC2EE3AB /* SpringLabel.swift in Sources */,
+				C99F49ACCF221A7F129FC86B90047B60 /* SpringTextField.swift in Sources */,
+				20D930BC76ECC459473005862592F575 /* SpringTextView.swift in Sources */,
+				11A78D4C24280B79B7E4D81B19ECA6D8 /* SpringView.swift in Sources */,
+				0EBC12DA299F1D3A86E766B0E6511B85 /* TransitionManager.swift in Sources */,
+				373D6AEE6396716B09385FE3AF88C0DD /* TransitionZoom.swift in Sources */,
+				ABBF85049A219D45F9246934DFE6C289 /* UnwindSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +706,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C6CD115E0E833CB003BCEBA60FB1621 /* Pods-FaceTrakingUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5F12CBAA62BE20EF2ECF19DD3C28D0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3890AF4B2A9C85948ED114832BA28CD4 /* SquishButton-dummy.m in Sources */,
+				8DBF0425C9C66FBF7CF4601BA816D07E /* SquishButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,11 +730,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7CF29F7735EEE52F29113F90739114C7 /* PBXTargetDependency */ = {
+		0D048ADB3C26C4DB2323DC34E2110383 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Spring;
+			target = C53312992467CBEC5BFEEE7171F1EB50 /* Spring */;
+			targetProxy = B9616C286D4FB55AA718C56423DCD079 /* PBXContainerItemProxy */;
+		};
+		33506A5B5AB8BBEF6450545653F524B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SquishButton;
+			target = BBB62A52BDC5DCD1D11A10047266A0B6 /* SquishButton */;
+			targetProxy = 089F5286E12D6C7EFF8513665C9D9A40 /* PBXContainerItemProxy */;
+		};
+		E9BDB3A51BD7A0350BC761B368FC15BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BubbleTransition;
 			target = 38830187D9E171E7B43047ED06A08ADC /* BubbleTransition */;
-			targetProxy = BFFA7B9D2ACABE28E362D62786F296B6 /* PBXContainerItemProxy */;
+			targetProxy = 924B079BA4CCE2256B397EECD7D3D790 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -485,9 +806,9 @@
 			};
 			name = Release;
 		};
-		286232432744EBC319F689E094A45A03 /* Debug */ = {
+		2A12F54732201C1F4F0E24D6265471CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 604E146B526D5AF0CCCCC43B2D4C56F6 /* Pods-FaceTraking.debug.xcconfig */;
+			baseConfigurationReference = DF4F8DABF2436B5E176619C488227564 /* Pods-FaceTraking.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -511,17 +832,17 @@
 				PRODUCT_NAME = Pods_FaceTraking;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		2F7B456D01EF0040EDE2E0E8D68375B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 497491BAF5A9B77C3B95879764640523 /* BubbleTransition.xcconfig */;
+			baseConfigurationReference = F28C8F7D0FF6B29D287DCA62B84C649E /* BubbleTransition.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -539,6 +860,37 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/BubbleTransition/BubbleTransition.modulemap";
 				PRODUCT_NAME = BubbleTransition;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C01C03F16B5F33EA187C22750BF6C54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EED48999AB2DDF56B05D4FF7843C8206 /* SquishButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SquishButton/SquishButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SquishButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SquishButton/SquishButton.modulemap";
+				PRODUCT_NAME = SquishButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -643,9 +995,43 @@
 			};
 			name = Debug;
 		};
+		5F06F9795EBFEF398AA98798EB1AAC86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 604E146B526D5AF0CCCCC43B2D4C56F6 /* Pods-FaceTraking.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FaceTraking/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FaceTraking/Pods-FaceTraking.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FaceTraking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		606ABE080128E20C56E8520BFA0D8578 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 497491BAF5A9B77C3B95879764640523 /* BubbleTransition.xcconfig */;
+			baseConfigurationReference = F28C8F7D0FF6B29D287DCA62B84C649E /* BubbleTransition.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -663,6 +1049,70 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/BubbleTransition/BubbleTransition.modulemap";
 				PRODUCT_NAME = BubbleTransition;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		65E02D50227732D67CCDEE041C0DD85A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AB184ED803E3EBFF659CE317AC5DA8C /* Spring.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		877350EE2ECBF39CFC3868050E8EE180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EED48999AB2DDF56B05D4FF7843C8206 /* SquishButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SquishButton/SquishButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SquishButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SquishButton/SquishButton.modulemap";
+				PRODUCT_NAME = SquishButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -740,6 +1190,37 @@
 			};
 			name = Release;
 		};
+		CAE74F4C7092BBF5C2A044C874392410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AB184ED803E3EBFF659CE317AC5DA8C /* Spring.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		CFED026FAD81568678215D3ECA22DB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A3A4F502ACBF096CA1B79782FCE38CF /* Pods-FaceTrakingUITests.debug.xcconfig */;
@@ -772,48 +1253,14 @@
 			};
 			name = Debug;
 		};
-		F48A127F099440D3DEE5D9CFF52AD28E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF4F8DABF2436B5E176619C488227564 /* Pods-FaceTraking.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FaceTraking/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FaceTraking/Pods-FaceTraking.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FaceTraking;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13B69D16327319FE079C053ED152EEAA /* Build configuration list for PBXNativeTarget "Pods-FaceTraking" */ = {
+		055A1CF5A1C7EDDACA26F2A7756799F4 /* Build configuration list for PBXNativeTarget "Spring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				286232432744EBC319F689E094A45A03 /* Debug */,
-				F48A127F099440D3DEE5D9CFF52AD28E /* Release */,
+				CAE74F4C7092BBF5C2A044C874392410 /* Debug */,
+				65E02D50227732D67CCDEE041C0DD85A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -827,11 +1274,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3AA36FCB79F7377E26DB88A983ABE83F /* Build configuration list for PBXNativeTarget "Pods-FaceTraking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F06F9795EBFEF398AA98798EB1AAC86 /* Debug */,
+				2A12F54732201C1F4F0E24D6265471CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		45873B352EA02F8CA82A1694DE8C0A24 /* Build configuration list for PBXNativeTarget "Pods-FaceTrakingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA5C763562D24C05A2479D4C5D3C9C39 /* Debug */,
 				BCF1EB5BDF286E5276DAF3B9201BE254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F3B74203329AFD24CDCE812FC30DAFB /* Build configuration list for PBXNativeTarget "SquishButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C01C03F16B5F33EA187C22750BF6C54 /* Debug */,
+				877350EE2ECBF39CFC3868050E8EE180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

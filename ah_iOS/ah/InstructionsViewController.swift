@@ -81,19 +81,22 @@ class InstructionsViewController: ModalViewController {
         // vowel
         var fileName: String!
         switch vowel {
-        case "a":
+        case "/a/":
             fileName = "Ah"
             phoneme = "ay"
-        case "e":
+        case "/e/":
             fileName = "Eh"
-        case "i":
+            phoneme = "ee"
+        case "/ī/":
             fileName = "Ee(i)"
             phoneme = "ee"
-        case "o":
-            fileName = "Oh"
-        case "u":
+        case "/oo/":
             fileName = "oo(u)"
             phoneme = "oo"
+        case "/u/":
+            fileName = "Oh"
+            phoneme = "u"
+        
         default:
             break   // Fuck it.
         }
