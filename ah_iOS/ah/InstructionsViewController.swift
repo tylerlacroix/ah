@@ -12,9 +12,47 @@ import AVFoundation
 
 class InstructionsViewController: UIViewController {
 
+    
+    @IBOutlet weak var tipsText: UITextView!
     var playerVC: AVPlayerViewController!
     internal var vowel: String!
     var phoneme = "oo"
+    let tips = [
+        "ay":"""
+        •    Open your mouth as wide as possible vertically and horizontally
+        •    Apply impact on the pit of your stomach
+        •    Let the air out
+        •    Feel the vibration on your throat
+        """,
+        "eh": """
+        •    Open your mouth as wide as possible horizontally, as if you are smiling with your mouth slightly open
+        •    Apply a small impact on the pit of your stomach
+        •    Let the air out
+        •    Feel the vibration on your throat
+
+        """,
+        "ee": """
+        •    Open your mouth as wide as possible horizontally.
+        •    Close your teeth
+        •    Apply a small impact on the pit of your stomach
+        •    Let the air out
+        •    Feel the vibration on your throat
+        """,
+        "oh": """
+        •    Open your mouth as wide as possible vertically.
+        •    Make an “O” shape with your mouth
+        •    Apply a small impact on the pit of your stomach
+        •    Let the air out
+        •    Feel the vibration on your throat
+        """,
+        "oo": """
+        •    Close your teeth
+        •    Stick your lips out, as you are kissing
+        •    Apply a small impact on the pit of your stomach
+        •    Let the air out
+        •    Feel the vibration on your throat
+        """
+    ]
     
     
     override func viewDidLoad() {
@@ -41,6 +79,8 @@ class InstructionsViewController: UIViewController {
         default:
             break   // Fuck it.
         }
+        
+        tipsText.text = tips[phoneme]
         
         // Get the video file URL
         let url = Bundle.main.url(forResource: fileName, withExtension: "mp4")!

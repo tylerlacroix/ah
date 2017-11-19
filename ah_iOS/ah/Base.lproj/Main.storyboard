@@ -329,21 +329,40 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtK-9g-Olj">
+                                <rect key="frame" x="40" y="404.33333333333331" width="295" height="204.66666666666669"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.20224562287330627" green="0.5951007604598999" blue="0.85695862770080566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="gtK-9g-Olj" firstAttribute="top" secondItem="ybw-Tt-5b4" secondAttribute="bottom" constant="40" id="AKe-wr-HMw"/>
                             <constraint firstItem="IMd-LZ-vP2" firstAttribute="centerX" secondItem="FDL-kf-C5j" secondAttribute="centerX" id="IIh-FR-2Qs"/>
                             <constraint firstItem="UEM-Cz-jFH" firstAttribute="trailing" secondItem="ybw-Tt-5b4" secondAttribute="trailing" id="LLr-cK-CDe"/>
                             <constraint firstItem="UEM-Cz-jFH" firstAttribute="top" secondItem="IMd-LZ-vP2" secondAttribute="bottom" constant="-41.333333333333201" id="NSA-Mq-XoI"/>
+                            <constraint firstItem="dsH-u6-EYt" firstAttribute="top" secondItem="gtK-9g-Olj" secondAttribute="bottom" constant="40" id="OmA-gC-ytE"/>
                             <constraint firstItem="ybw-Tt-5b4" firstAttribute="top" secondItem="IMd-LZ-vP2" secondAttribute="bottom" constant="25" id="T9M-AR-rdw"/>
                             <constraint firstItem="UEM-Cz-jFH" firstAttribute="bottom" secondItem="dsH-u6-EYt" secondAttribute="bottom" id="UME-FF-uBR"/>
+                            <constraint firstItem="UEM-Cz-jFH" firstAttribute="trailing" secondItem="gtK-9g-Olj" secondAttribute="trailing" constant="40" id="edi-WB-V6B"/>
                             <constraint firstItem="ybw-Tt-5b4" firstAttribute="leading" secondItem="UEM-Cz-jFH" secondAttribute="leading" id="f8P-61-fHD"/>
                             <constraint firstItem="UEM-Cz-jFH" firstAttribute="trailing" secondItem="dsH-u6-EYt" secondAttribute="trailing" id="iwq-fT-jzr"/>
+                            <constraint firstItem="gtK-9g-Olj" firstAttribute="leading" secondItem="UEM-Cz-jFH" secondAttribute="leading" constant="40" id="vkG-W8-6hn"/>
                             <constraint firstItem="dsH-u6-EYt" firstAttribute="leading" secondItem="UEM-Cz-jFH" secondAttribute="leading" id="yq9-Sj-NxH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UEM-Cz-jFH"/>
                     </view>
+                    <connections>
+                        <outlet property="tipsText" destination="gtK-9g-Olj" id="mRA-uc-mQ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNU-pf-pe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
