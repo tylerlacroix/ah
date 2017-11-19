@@ -77,6 +77,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     func resetTracking() {
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
+        //configuration.providesAudioData = true
         
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
@@ -116,6 +117,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         guard error is ARError else { return }
     }
     
+    func session(_ session: ARSession, didOutputAudioSampleBuffer audioSampleBuffer: CMSampleBuffer) {
+        print(audioSampleBuffer)
+    }
+    
     func sessionWasInterrupted(_ session: ARSession) {
     }
     
@@ -141,9 +146,18 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
 
 
 // MARK: - UIImagePickerController
+let baseline_vals = ["ay": [0.298766956, 0.142167151, 0.085799411, 0.133791447, 0.038765031, 0.023759159],
+              "ee": [0.168310106, 0.10076052, 0.035495957, 0.088527273, 0.063122351, 0.041300956],
+              "oo": [0.177990764, 0.293824002, 0.161934374, 0.850610912, 0.005674623, 0.004009779]]
+
+let correction_strings = [["Open your jaw more!", "Close your jaw more!"],
+                          ["Move your mouth forward!", "Move your mouth backward!"],
+                          ["Open your lips more!", "Close your lips more!"],
+                          ["Pucker your mouth more!", "Pucker your mouth less!"],
+                          ["Move the left side of your mouth back!", "Move the left side of your mouth forward!"],
+                          ["Move the right side of your mouth back!", "Move the right side of your mouth forward!"]]
 
 extension ViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
     func addTapGesture(){
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         sceneView.addGestureRecognizer(tapGesture)
@@ -154,20 +168,51 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
         let mouthFunnel = (shapes[ARFaceAnchor.BlendShapeLocation.mouthFunnel] as! Double)
         let mouthClose = (shapes[ARFaceAnchor.BlendShapeLocation.mouthClose] as! Double)
         let mouthPucker = (shapes[ARFaceAnchor.BlendShapeLocation.mouthPucker] as! Double)
+        let mouthDimpleLeft = (shapes[ARFaceAnchor.BlendShapeLocation.mouthDimpleLeft] as! Double)
+        let mouthDimpleRight = (shapes[ARFaceAnchor.BlendShapeLocation.mouthDimpleRight] as! Double)
         
-        diff(jmmm: [jawOpen, mouthFunnel, mouthClose, mouthPucker], vowel: "a")
-        var str = String(jawOpen) + " " + String(mouthFunnel) + " " + String(mouthClose) + " " + String(mouthPucker)
-        print(str)
+        let actual = [jawOpen, mouthFunnel, mouthClose, mouthPucker, mouthDimpleLeft, mouthDimpleRight]
+        
+        var phoneme = "oo"
+        var maxErr = maxError(baseline: baseline_vals[phoneme]!, actual: actual)
+        
+        //print(maxErr)
+        
+        if maxErr.0 < 80 {
+            print(correction_strings[maxErr.2][maxErr.1 > 0 ? 0 : 1])
+        } else {
+            print("Good!")
+        }
     }
     
-    func diff(jmmm: [Double], vowel: String) -> [Double] {
-        var dif = jmmm
-        let v_dict = ["a": [0.323729, 0.0618158, 0.0480391, 0.0595103], "e": [0.323729, 0.0618158, 0.0480391, 0.0595103], "o": [0.323729, 0.0618158, 0.0480391, 0.0595103]]
-        let v = (v_dict[vowel] as! [Double])
-        for (i, v) in v.enumerated() {
-            dif[i] -= v
-        }
-        return dif
+    func squareError(baseline: [Double], actual: [Double]) -> Double {
+        var leastSq = 0.0
         
+        for i in 0..<baseline.count {
+            var err = baseline[i] - actual[i]
+            leastSq += err*err
+        }
+        
+        return leastSq
+    }
+    
+    func maxError(baseline: [Double], actual: [Double]) -> (Double,Double,Int) {
+        var minScore = 100.0
+        var err = 0.0
+        var maxInd = 0
+        
+        for i in 0..<baseline.count {
+            let c_max = baseline[i] - actual[i]
+            let max_possible = (baseline[i] < 0.5) ? 1 - baseline[i] : baseline[i]
+            let score = 100*(1 - abs(c_max) / max_possible)
+            
+            if score < minScore {
+                minScore = score
+                err = c_max
+                maxInd = i
+            }
+        }
+        
+        return (minScore,err,maxInd)
     }
 }
