@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>CFBundleDisplayName</key>
+	<string>Ah!</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -24,6 +28,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera is used for AR</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone used to measure phoneme pronounciation</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Camera is used for AR Mask Texture</string>
 	<key>UILaunchStoryboardName</key>
@@ -41,8 +47,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
