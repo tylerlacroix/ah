@@ -6,6 +6,8 @@
 
 import UIKit
 import ARKit
+import Alamofire
+import PopupDialog
 
 class FaceScoreViewController: ModalViewController, OEEventsObserverDelegate, ARSCNViewDelegate, ARSessionDelegate {
     public var phoneme = "oo"
@@ -113,27 +115,107 @@ class FaceScoreViewController: ModalViewController, OEEventsObserverDelegate, AR
         if(!OEPocketsphinxController.sharedInstance().isListening) {
             OEPocketsphinxController.sharedInstance().startListeningWithLanguageModel(atPath: self.pathToFirstDynamicallyGeneratedLanguageModel, dictionaryAtPath: self.pathToFirstDynamicallyGeneratedDictionary, acousticModelAtPath: OEAcousticModel.path(toModel: "AcousticModelEnglish"), languageModelIsJSGF: false) // Start speech recognition, but only if we aren't already listening.
         }
-        
-        var timerCount = 25
-        detectedAudio = false
-        mouthShapeScore = (0.0,0.0,0)
-        pronounciationScore = 0.0
-        
-        //resetButton.titleLabel!.text = "Processing..."
-        resetButton.setTitle("Processing...", for: UIControlState.normal)
-        resetButton.isEnabled = false
-        
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
-            timerCount -= 1
-            let score = self.calcScore()
+        let RECORDING = true
+        if RECORDING {
+            var timerCount = 50
+            var data: [String: [Double]] = [:]
             
-            if score.0 > self.mouthShapeScore.0 {
-                self.mouthShapeScore = score
+            Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { (timer) in
+                timerCount -= 1
+                self.resetButton.setTitle("Processing...", for: UIControlState.normal)
+                for (key, val) in self.shapes {
+                    if var value = data[key.rawValue] {
+                        data[key.rawValue]!.append(val as! Double)
+                    } else {
+                        data[key.rawValue] = [val as! Double]
+                    }
+                }
+                let score = self.calcScore()
+                
+                if score.0 > self.mouthShapeScore.0 {
+                    self.mouthShapeScore = score
+                }
+                
+                if timerCount == 0 {
+                    let s = String(describing: data)
+                    let z = s.dropFirst().dropLast()
+                    let str = "{ \"label\":\""+self.phoneme+"\", " + String(z) + "}";
+                    
+                    // Prepare the popup assets
+                    let title = "Recording done"
+                    let message = "Send it?"
+                    
+                    // Create the dialog
+                    let popup = PopupDialog(title: title, message: message)
+                    
+                    // Create buttons
+                    let buttonOne = CancelButton(title: "CANCEL") {
+                        print("You canceled the car dialog.")
+                    }
+                    
+                    // This button will not the dismiss the dialog
+                    let buttonTwo = DefaultButton(title: "SEND") {
+                        print("What a beauty!")
+                        self.sendData(data: str)
+                    }
+                    
+                    // Add buttons to dialog
+                    // Alternatively, you can use popup.addButton(buttonOne)
+                    // to add a single button
+                    popup.addButtons([buttonOne, buttonTwo])
+                    
+                    // Present dialog
+                    self.present(popup, animated: true, completion: nil)
+                    
+                    timer.invalidate()
+                    self.endTest()
+                }
             }
             
-            if timerCount == 0 {
-                timer.invalidate()
-                self.endTest()
+        }
+        else {
+        
+            var timerCount = 25
+            detectedAudio = false
+            mouthShapeScore = (0.0,0.0,0)
+            pronounciationScore = 0.0
+            
+            //resetButton.titleLabel!.text = "Processing..."
+            resetButton.setTitle("Processing...", for: UIControlState.normal)
+            resetButton.isEnabled = false
+            
+            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
+                timerCount -= 1
+                let score = self.calcScore()
+                
+                if score.0 > self.mouthShapeScore.0 {
+                    self.mouthShapeScore = score
+                }
+                
+                if timerCount == 0 {
+                    timer.invalidate()
+                    self.endTest()
+                }
+            }
+        }
+    }
+    
+    func sendData(data: String) {
+        let parameters: Parameters = [
+            "data": data
+        ]
+        let _headers : HTTPHeaders = ["Content-Type":"application/json"]
+        Alamofire.request("http://tylerlacroix.com/ah/server.php", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: _headers).responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
             }
         }
     }
@@ -461,5 +543,19 @@ extension FaceScoreViewController: UINavigationControllerDelegate, UIImagePicker
         }
         
         return (minScore,err,maxInd)
+    }
+}
+
+extension String {
+    subscript (bounds: CountableClosedRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return String(self[start...end])
+    }
+    
+    subscript (bounds: CountableRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return String(self[start..<end])
     }
 }

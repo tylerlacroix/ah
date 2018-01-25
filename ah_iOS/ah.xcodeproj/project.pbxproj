@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1FAD82E6E6E36794C0FE2808 /* Pods_FaceTraking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70FE99A2562EA2202E309FB /* Pods_FaceTraking.framework */; };
 		3C7E39CBE6D317FB30B68CCD /* Pods_FaceTrakingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB89DE948E7A2AFF9055168 /* Pods_FaceTrakingTests.framework */; };
+		523D140E201A596600B05025 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523D140F201A596600B05025 /* Alamofire.framework */; };
+		523D1410201A5A4400B05025 /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523D1411201A5A4400B05025 /* PopupDialog.framework */; };
 		58A729D81FC109D3006500C8 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A729D71FC109D3006500C8 /* InstructionsViewController.swift */; };
 		58C4338F1FC16CF000E0F5D5 /* VowelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C4338E1FC16CF000E0F5D5 /* VowelsViewController.swift */; };
 		58C433941FC1753600E0F5D5 /* oo(u).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 58C433901FC1753600E0F5D5 /* oo(u).mp4 */; };
@@ -61,6 +63,8 @@
 		2521C30CC7242AEDC10B74BB /* Pods-FaceTrakingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingUITests/Pods-FaceTrakingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4090DBF174CD5FEF5852E471 /* Pods-FaceTrakingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceTrakingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceTrakingTests/Pods-FaceTrakingTests.release.xcconfig"; sourceTree = "<group>"; };
 		4C8EA045F0C317844E4FD269 /* Pods_FaceTrakingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTrakingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		523D140F201A596600B05025 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		523D1411201A5A4400B05025 /* PopupDialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PopupDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A729D11FC1064D006500C8 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		58A729D21FC1064D006500C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		58A729D71FC109D3006500C8 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523D1410201A5A4400B05025 /* PopupDialog.framework in Frameworks */,
+				523D140E201A596600B05025 /* Alamofire.framework in Frameworks */,
 				C4E947311FC13B4000C7B1BE /* Slt.framework in Frameworks */,
 				C4E947301FC13B4000C7B1BE /* OpenEars.framework in Frameworks */,
 				1FAD82E6E6E36794C0FE2808 /* Pods_FaceTraking.framework in Frameworks */,
@@ -135,6 +141,8 @@
 		58A729D01FC1064C006500C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				523D1411201A5A4400B05025 /* PopupDialog.framework */,
+				523D140F201A596600B05025 /* Alamofire.framework */,
 				C4E9472C1FC13B3F00C7B1BE /* AcousticModelEnglish.bundle */,
 				C4E9472D1FC13B4000C7B1BE /* OpenEars.framework */,
 				C4E9472E1FC13B4000C7B1BE /* Slt.framework */,
@@ -482,13 +490,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FaceTraking/Pods-FaceTraking-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/SquishButton/SquishButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SquishButton.framework",
 			);
